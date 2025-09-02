@@ -436,19 +436,21 @@ ul {
 /* Typography */
 @font-face {
   font-family: 'Open Sans';
-  src: url("../fonts/OpenSans-Regular.ttf");
+  src: url("../fonts/OpenSans-Regular.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
 }
+
 @font-face {
   font-family: 'Open Sans';
-  src: url("../fonts/OpenSans-Bold.ttf");
+  src: url("../fonts/OpenSans-Bold.ttf") format("truetype");
   font-weight: 500;
   font-style: normal;
 }
+
 @font-face {
   font-family: 'Open Sans';
-  src: url("../fonts/OpenSans-Semibold.ttf");
+  src: url("../fonts/OpenSans-SemiBold.ttf") format("truetype");
   font-weight: 700;
   font-style: normal;
 }
@@ -1398,6 +1400,7 @@ a.ms-confirm-trigger:hover{
   .navbar,
   .ms-logged-out .navbar{
     padding: 0.25rem 15px;
+    
   }
   .ms-navbar .ms-nav-list{
     position: absolute;
@@ -4634,10 +4637,10 @@ table.dataTable thead .sorting_desc_disabled:after{
 .ms-auth-bg{
   position: relative;
   height: 100%;
-  background-image: url('https://via.placeholder.com/1000x700');
+  /* background-image: url('https://via.placeholder.com/1000x700'); */
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center center;
+  background-position:center;
 }
 .ms-auth-form{
   position: relative;
@@ -6840,3 +6843,23 @@ body:not(.ms-settings-open) .ms-settings-toggle:hover{
     color:#ffffff;
     
 }
+
+body.ms-logged-out .ms-navbar,
+body.ms-logged-out .ms-side-nav {
+    display: none !important;
+}
+
+/* 로그인 전체 박스를 화면 중앙에 위치시키기 */
+body.ms-logged-out .ms-auth {
+  display: flex;
+  justify-content: center; /* 가로 중앙 */
+  align-items: center;     /* 세로 중앙 */
+  min-height: 100vh;       /* 세로 꽉 차게 */
+}
+
+/* 기존 박스 디자인은 그대로 유지 */
+body.ms-logged-out .ms-auth-col {
+  flex: unset;
+  width: auto;  /* 칸 크기 늘어나는 거 방지 */
+}
+

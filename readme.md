@@ -7,3 +7,5 @@ padding 공란이던거 0; 추가
 -ms-filter 전체 삭제( chrome 사용)
 
 불필요속성 vertical-align 삭제
+
+style.css 4639줄 주석처리 
