@@ -24,7 +24,6 @@
 <!-- Weeducate styles -->
 
 <!-- Favicon -->
-<script src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=84acc9948fcdf1873b66974cabcae962&autoload=false&libraries=services"></script>
 
 <link href="assets/css/dashboard.css" rel="stylesheet"/></head>
 <body class="ms-body ms-aside-left-open ms-primary-theme ms-has-quickbar">
@@ -625,77 +624,478 @@
 <span class="ms-quick-bar-label">Configure</span>
 </a>
 </div>
-
-<!-- Quick bar -->
-<aside class="ms-quick-bar fixed ms-d-block-lg" id="ms-quick-bar">
-  <ul class="nav nav-tabs ms-quick-bar-list" role="tablist">
-    <!-- Calendar -->
-    <li class="ms-quick-bar-item ms-has-qa">
-      <a data-toggle="tab" href="#qa-calendar" role="tab">
-        <i class="flaticon-calendar"></i>
-        <span class="ms-quick-bar-label">Calendar</span>
-      </a>
-    </li>
-    <!-- Location -->
-    <li class="ms-quick-bar-item ms-has-qa">
-      <a data-toggle="tab" href="#qa-location" role="tab">
-        <i class="flaticon-map"></i>
-        <span class="ms-quick-bar-label">Location</span>
-      </a>
-    </li>
-    <!-- Attendance -->
-    <li class="ms-quick-bar-item ms-has-qa">
-      <a data-toggle="tab" href="#qa-attendance" role="tab">
-        <i class="flaticon-user"></i>
-        <span class="ms-quick-bar-label">Attendance</span>
-      </a>
-    </li>
-  </ul>
-
-  <div class="ms-quick-bar-content">
-    <div class="ms-quick-bar-header clearfix">
-      <h5 class="ms-quick-bar-title float-left">Quick Access</h5>
-      <button class="close ms-toggler" data-target="#ms-quick-bar" data-toggle="hideQuickBar">
-        <span aria-hidden="true">×</span>
-      </button>
-    </div>
-
-    <div class="ms-quick-bar-body tab-content">
-      <!-- Calendar -->
-      <div class="tab-pane fade show" id="qa-calendar" role="tabpanel">
-        <div class="p-3">
-          <h6>오늘 일정</h6>
-          <ul>
-            <li>10:00 수업 시작</li>
-            <li>12:00 점심</li>
-            <li>15:00 학부모 상담</li>
-          </ul>
-          <div id="calendar"></div>
-        </div>
-      </div>
-
-      <!-- Location -->
-      <div class="tab-pane fade" id="qa-location" role="tabpanel">
-        <div class="p-3">
-          <h6>어린이집 위치</h6>
-          <div id="map" style="width:100%;height:300px;"></div>
-        </div>
-      </div>
-
-      <!-- Attendance -->
-      <div class="tab-pane fade" id="qa-attendance" role="tabpanel">
-        <div class="p-3">
-          <h6>출석 현황</h6>
-          <p>등원 18명 / 결석 2명</p>
-          <div style="background:#eee;height:10px;border-radius:5px;">
-            <div style="background:#4CAF50;width:90%;height:10px;border-radius:5px;"></div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+<!-- Quick bar Content -->
+<div class="ms-quick-bar-content">
+<div class="ms-quick-bar-header clearfix">
+<h5 class="ms-quick-bar-title float-left">Title</h5>
+<button aria-label="Close" class="close ms-toggler" data-target="#ms-quick-bar" data-toggle="hideQuickBar" type="button"><span aria-hidden="true">×</span></button>
+</div>
+<div class="ms-quick-bar-body tab-content">
+<div class="tab-pane" id="qa-chat" role="tabpanel">
+<div class="ms-chat-container">
+<div class="ms-chat-header px-3">
+<div class="ms-chat-user-container media clearfix">
+<div class="ms-chat-status ms-status-online ms-chat-img mr-3 align-self-center">
+<img alt="people" class="ms-img-round" src="https://metropolitanhost.com/themes/templatemoster/html/weeducate/assets/img/we-educate/new-student-4.jpg"/>
+</div>
+<div class="media-body ms-chat-user-info mt-1">
+<h6>Anny Farisha</h6>
+<a aria-expanded="false" aria-haspopup="true" class="text-disabled has-chevron fs-12" data-toggle="dropdown" href="#">
+                    Available
+                  </a>
+<ul class="dropdown-menu">
+<li class="ms-dropdown-list">
+<a class="media p-2" href="#">
+<div class="media-body">
+<span>Busy</span>
+</div>
+</a>
+<a class="media p-2" href="#">
+<div class="media-body">
+<span>Away</span>
+</div>
+</a>
+<a class="media p-2" href="#">
+<div class="media-body">
+<span>Offline</span>
+</div>
+</a>
+</li>
+</ul>
+</div>
+</div>
+<form class="ms-form my-3" method="post">
+<div class="ms-form-group my-0 mb-0 has-icon fs-14">
+<input class="ms-form-input w-100" name="search" placeholder="Search for People and Groups" type="search" value=""/>
+<i class="flaticon-search text-disabled"></i>
+</div>
+</form>
+</div>
+<div class="ms-chat-body">
+<ul class="nav nav-tabs tabs-bordered d-flex nav-justified px-3" role="tablist">
+<li class="fs-12" role="presentation"><a aria-controls="chats" class="active show" data-toggle="tab" href="#chats" role="tab"> Chats </a></li>
+<li class="fs-12" role="presentation"><a aria-controls="groups" data-toggle="tab" href="#groups" role="tab"> Groups </a></li>
+<li class="fs-12" role="presentation"><a aria-controls="contacts" data-toggle="tab" href="#contacts" role="tab"> Contacts </a></li>
+</ul>
+<div class="tab-content">
+<div class="tab-pane active show fade in" id="chats" role="tabpanel">
+<ul class="ms-scrollable ms-quickbar-container">
+<li class="ms-chat-user-container ms-open-chat ms-deletable p-3 media clearfix">
+<div class="ms-chat-status ms-status-away ms-has-new-msg ms-chat-img mr-3 align-self-center">
+<span class="msg-count">3</span>
+<img alt="people" class="ms-img-round" src="https://metropolitanhost.com/themes/templatemoster/html/weeducate/assets/img/we-educate/new-student-5.jpg"/>
+</div>
+<div class="media-body ms-chat-user-info mt-1">
+<h6>James Zathila</h6> <span class="ms-chat-time">2 Hours ago</span>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In in arcu turpis. Nunc</p>
+<i class="flaticon-trash ms-delete-trigger"> </i>
+</div>
+</li>
+<li class="ms-chat-user-container ms-open-chat ms-deletable p-3 media clearfix">
+<div class="ms-chat-status ms-status-online ms-chat-img mr-3 align-self-center">
+<img alt="people" class="ms-img-round" src="https://metropolitanhost.com/themes/templatemoster/html/weeducate/assets/img/we-educate/topper-1.jpg"/>
+</div>
+<div class="media-body ms-chat-user-info mt-1">
+<h6>Raymart Sandiago</h6> <span class="ms-chat-time">3 Hours ago</span>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In in arcu turpis. Nunc</p>
+<i class="flaticon-trash ms-delete-trigger"> </i>
+</div>
+</li>
+<li class="ms-chat-user-container ms-open-chat ms-deletable p-3 media clearfix">
+<div class="ms-chat-status ms-status-offline ms-chat-img mr-3 align-self-center">
+<img alt="people" class="ms-img-round" src="https://metropolitanhost.com/themes/templatemoster/html/weeducate/assets/img/we-educate/topper-2.jpg"/>
+</div>
+<div class="media-body ms-chat-user-info mt-1">
+<h6>Heather Brown</h6> <span class="ms-chat-time">12 Hours ago</span>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In in arcu turpis. Nunc</p>
+<i class="flaticon-trash ms-delete-trigger"> </i>
+</div>
+</li>
+<li class="ms-chat-user-container ms-open-chat ms-deletable p-3 media clearfix">
+<div class="ms-chat-status ms-status-busy ms-chat-img mr-3 align-self-center">
+<img alt="people" class="ms-img-round" src="https://metropolitanhost.com/themes/templatemoster/html/weeducate/assets/img/we-educate/topper-4.jpg"/>
+</div>
+<div class="media-body ms-chat-user-info mt-1">
+<h6>Micheal John</h6> <span class="ms-chat-time">Yesterday</span>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In in arcu turpis. Nunc</p>
+<i class="flaticon-trash ms-delete-trigger"> </i>
+</div>
+</li>
+<li class="ms-chat-user-container ms-open-chat ms-deletable p-3 media clearfix">
+<div class="ms-chat-status ms-status-online ms-chat-img mr-3 align-self-center">
+<img alt="people" class="ms-img-round" src="https://metropolitanhost.com/themes/templatemoster/html/weeducate/assets/img/we-educate/topper-5.jpg"/>
+</div>
+<div class="media-body ms-chat-user-info mt-1">
+<h6>John Doe</h6> <span class="ms-chat-time">3 Days ago</span>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In in arcu turpis. Nunc</p>
+<i class="flaticon-trash ms-delete-trigger"> </i>
+</div>
+</li>
+</ul>
+</div>
+<div class="tab-pane fade" id="groups" role="tabpanel">
+<ul class="ms-scrollable ms-quickbar-container">
+<li class="ms-chat-user-container ms-open-chat p-3 media clearfix">
+<div class="ms-chat-img mr-3 align-self-center">
+<img alt="people" class="ms-img-round" src="https://metropolitanhost.com/themes/templatemoster/html/weeducate/assets/img/we-educate/topper-1.jpg"/>
+</div>
+<div class="media-body ms-chat-user-info mt-1">
+<h6>James Zathila</h6> <a class="ms-chat-time" href="#"> <i class="flaticon-chat"></i> </a>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In in arcu turpis. Nunc</p>
+<ul class="ms-group-members clearfix mt-3 mb-0">
+<li> <img alt="member" src="https://metropolitanhost.com/themes/templatemoster/html/weeducate/assets/img/we-educate/topper-2.jpg"/> </li>
+<li> <img alt="member" src="https://metropolitanhost.com/themes/templatemoster/html/weeducate/assets/img/we-educate/topper-3.jpg"/> </li>
+<li> <img alt="member" src="https://metropolitanhost.com/themes/templatemoster/html/weeducate/assets/img/we-educate/topper-4.jpg"/> </li>
+<li class="ms-group-count"> + 12 more </li>
+</ul>
+</div>
+</li>
+<li class="ms-chat-user-container ms-open-chat p-3 media clearfix">
+<div class="ms-chat-img mr-3 align-self-center">
+<img alt="people" class="ms-img-round" src="https://metropolitanhost.com/themes/templatemoster/html/weeducate/assets/img/we-educate/topper-4.jpg"/>
+</div>
+<div class="media-body ms-chat-user-info mt-1">
+<h6>Raymart Sandiago</h6> <a class="ms-chat-time" href="#"> <i class="flaticon-chat"></i> </a>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In in arcu turpis. Nunc</p>
+<ul class="ms-group-members clearfix mt-3 mb-0">
+<li> <img alt="member" src="https://metropolitanhost.com/themes/templatemoster/html/weeducate/assets/img/we-educate/topper-3.jpg"/> </li>
+<li> <img alt="member" src="https://metropolitanhost.com/themes/templatemoster/html/weeducate/assets/img/we-educate/topper-4.jpg"/> </li>
+</ul>
+</div>
+</li>
+<li class="ms-chat-user-container ms-open-chat p-3 media clearfix">
+<div class="ms-chat-img mr-3 align-self-center">
+<img alt="people" class="ms-img-round" src="https://metropolitanhost.com/themes/templatemoster/html/weeducate/assets/img/we-educate/topper-2.jpg"/>
+</div>
+<div class="media-body ms-chat-user-info mt-1">
+<h6>John Doe</h6> <a class="ms-chat-time" href="#"> <i class="flaticon-chat"></i> </a>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In in arcu turpis. Nunc</p>
+<ul class="ms-group-members clearfix mt-3 mb-0">
+<li> <img alt="member" src="https://metropolitanhost.com/themes/templatemoster/html/weeducate/assets/img/we-educate/topper-4.jpg"/> </li>
+<li> <img alt="member" src="https://metropolitanhost.com/themes/templatemoster/html/weeducate/assets/img/we-educate/topper-5.jpg"/> </li>
+<li> <img alt="member" src="https://metropolitanhost.com/themes/templatemoster/html/weeducate/assets/img/we-educate/topper-6.jpg"/> </li>
+<li class="ms-group-count"> + 4 more </li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="tab-pane fade" id="contacts" role="tabpanel">
+<ul class="ms-scrollable ms-quickbar-container">
+<li class="ms-chat-user-container ms-open-chat p-3 media clearfix">
+<div class="ms-chat-img mr-3 align-self-center">
+<img alt="people" class="ms-img-round" src="https://metropolitanhost.com/themes/templatemoster/html/weeducate/assets/img/we-educate/topper-1.jpg"/>
+</div>
+<div class="media-body ms-chat-user-info mt-1">
+<h6>John Doe</h6> <a class="ms-chat-time" href="#"> <i class="flaticon-chat"></i> </a>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In in arcu turpis. Nunc</p>
+</div>
+</li>
+<li class="ms-chat-user-container ms-open-chat p-3 media clearfix">
+<div class="ms-chat-img mr-3 align-self-center">
+<img alt="people" class="ms-img-round" src="https://metropolitanhost.com/themes/templatemoster/html/weeducate/assets/img/we-educate/topper-2.jpg"/>
+</div>
+<div class="media-body ms-chat-user-info mt-1">
+<h6>Raymart Sandiago</h6> <a class="ms-chat-time" href="#"> <i class="flaticon-chat"></i> </a>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In in arcu turpis. Nunc</p>
+</div>
+</li>
+<li class="ms-chat-user-container ms-open-chat p-3 media clearfix">
+<div class="ms-chat-img mr-3 align-self-center">
+<img alt="people" class="ms-img-round" src="https://metropolitanhost.com/themes/templatemoster/html/weeducate/assets/img/we-educate/topper-3.jpg"/>
+</div>
+<div class="media-body ms-chat-user-info mt-1">
+<h6>Micheal John</h6> <a class="ms-chat-time" href="#"> <i class="flaticon-chat"></i> </a>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In in arcu turpis. Nunc</p>
+</div>
+</li>
+<li class="ms-chat-user-container ms-open-chat p-3 media clearfix">
+<div class="ms-chat-img mr-3 align-self-center">
+<img alt="people" class="ms-img-round" src="https://metropolitanhost.com/themes/templatemoster/html/weeducate/assets/img/we-educate/topper-4.jpg"/>
+</div>
+<div class="media-body ms-chat-user-info mt-1">
+<h6>Heather Brown</h6> <a class="ms-chat-time" href="#"> <i class="flaticon-chat"></i> </a>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In in arcu turpis. Nunc</p>
+</div>
+</li>
+<li class="ms-chat-user-container ms-open-chat p-3 media clearfix">
+<div class="ms-chat-img mr-3 align-self-center">
+<img alt="people" class="ms-img-round" src="https://metropolitanhost.com/themes/templatemoster/html/weeducate/assets/img/we-educate/topper-5.jpg"/>
+</div>
+<div class="media-body ms-chat-user-info mt-1">
+<h6>Mila Freign</h6> <a class="ms-chat-time" href="#"> <i class="flaticon-chat"></i> </a>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In in arcu turpis. Nunc</p>
+</div>
+</li>
+<li class="ms-chat-user-container ms-open-chat p-3 media clearfix">
+<div class="ms-chat-img mr-3 align-self-center">
+<img alt="people" class="ms-img-round" src="https://metropolitanhost.com/themes/templatemoster/html/weeducate/assets/img/we-educate/topper-6.jpg"/>
+</div>
+<div class="media-body ms-chat-user-info mt-1">
+<h6>James Zathila</h6> <a class="ms-chat-time" href="#"> <i class="flaticon-chat"></i> </a>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In in arcu turpis. Nunc</p>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="tab-pane" id="qa-email" role="tabpanel">
+<div class="ms-email-container">
+<div class="ms-qa-options">
+<a class="btn btn-primary w-100 mt-0 has-icon" href="#"> <i class="flaticon-pencil"></i> Compose Email </a>
+</div>
+<ul class="ms-scrollable ms-quickbar-container">
+<li class="p-3 media ms-email clearfix">
+<div class="ms-email-img mr-3">
+<img alt="people" class="ms-img-round" src="https://metropolitanhost.com/themes/templatemoster/html/weeducate/assets/img/we-educate/topper-1.jpg"/>
+</div>
+<div class="media-body ms-email-details">
+<span class="ms-email-sender">James Zathila</span>
+<h6 class="ms-email-subject">[WordPress] New Comment</h6> <span class="ms-email-time">2 Hours ago</span>
+<p class="ms-email-msg">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In in arcu turpis. Nunc</p>
+</div>
+</li>
+<li class="p-3 media ms-email clearfix">
+<div class="ms-email-img mr-3">
+<img alt="people" class="ms-img-round" src="https://metropolitanhost.com/themes/templatemoster/html/weeducate/assets/img/we-educate/topper-2.jpg"/>
+</div>
+<div class="media-body ms-email-details">
+<span class="ms-email-sender">John Doe</span>
+<h6 class="ms-email-subject">[WordPress] New Comment</h6> <span class="ms-email-time">8 Hours ago</span>
+<p class="ms-email-msg">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In in arcu turpis. Nunc</p>
+</div>
+</li>
+<li class="p-3 media ms-email clearfix">
+<div class="ms-email-img mr-3">
+<img alt="people" class="ms-img-round" src="https://metropolitanhost.com/themes/templatemoster/html/weeducate/assets/img/we-educate/topper-4.jpg"/>
+</div>
+<div class="media-body ms-email-details">
+<span class="ms-email-sender">Heather Brown</span>
+<h6 class="ms-email-subject">[WordPress] New Comment</h6> <span class="ms-email-time">1 Day ago</span>
+<p class="ms-email-msg">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In in arcu turpis. Nunc</p>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="tab-pane" id="qa-toDo" role="tabpanel">
+<div class="ms-quickbar-container ms-todo-list-container ms-scrollable">
+<form class="ms-add-task-block">
+<div class="form-group mx-3 mt-0 fs-14 clearfix">
+<input class="form-control fs-14 float-left" id="task-block" name="todo-block" placeholder="Add Task Block" type="text" value=""/>
+<button class="ms-btn-icon bg-primary float-right" type="submit"><i class="material-icons text-disabled">add</i></button>
+</div>
+</form>
+<ul class="ms-todo-list">
+<li class="ms-card ms-qa-card ms-deletable">
+<div class="ms-card-header clearfix">
+<h6 class="ms-card-title">Task Block Title</h6>
+<button class="ms-add-task-to-block ms-btn-icon float-right" data-placement="left" data-toggle="tooltip" title="Add a Task to this block"> <i class="material-icons text-disabled">add</i> </button>
+</div>
+<div class="ms-card-body">
+<ul class="ms-list ms-task-block">
+<li class="ms-list-item ms-to-do-task ms-deletable">
+<label class="ms-checkbox-wrap ms-todo-complete">
+<input type="checkbox" value=""/>
+<i class="ms-checkbox-check"></i>
+</label>
+<span> Task to do </span>
+<button class="close" type="submit"><i class="flaticon-trash ms-delete-trigger"> </i></button>
+</li>
+<li class="ms-list-item ms-to-do-task ms-deletable">
+<label class="ms-checkbox-wrap ms-todo-complete">
+<input type="checkbox" value=""/>
+<i class="ms-checkbox-check"></i>
+</label>
+<span>Task to do</span>
+<button class="close" type="submit"><i class="flaticon-trash ms-delete-trigger"> </i></button>
+</li>
+</ul>
+</div>
+<div class="ms-card-footer clearfix">
+<a class="text-disabled mr-2" href="#"> <i class="flaticon-archive"> </i> Archive </a>
+<a class="text-disabled ms-delete-trigger float-right" href="#"> <i class="flaticon-trash"> </i> Delete </a>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="tab-pane" id="qa-reminder" role="tabpanel">
+<div class="ms-quickbar-container ms-reminders">
+<ul class="ms-qa-options">
+<li> <a data-target="#reminder-modal" data-toggle="modal" href="#"> <i class="flaticon-bell"></i> New Reminder </a> </li>
+</ul>
+<div class="ms-quickbar-container ms-scrollable">
+<div class="ms-card ms-qa-card ms-deletable">
+<div class="ms-card-body">
+<p> Developer Meeting in Block B </p>
+<span class="text-disabled fs-12"><i class="material-icons fs-14">access_time</i> Today - 3:45 pm</span>
+</div>
+<div class="ms-card-footer clearfix">
+<div class="ms-note-editor float-right">
+<a class="text-disabled mr-2" data-target="#reminder-modal" data-toggle="modal" href="#"> <i class="flaticon-pencil"> </i> Edit </a>
+<a class="text-disabled ms-delete-trigger" href="#"> <i class="flaticon-trash"> </i> Delete </a>
+</div>
+</div>
+</div>
+<div class="ms-card ms-qa-card ms-deletable">
+<div class="ms-card-body">
+<p> Start adding change log to version 2 </p>
+<span class="text-disabled fs-12"><i class="material-icons fs-14">access_time</i> Tomorrow - 12:00 pm</span>
+</div>
+<div class="ms-card-footer clearfix">
+<div class="ms-note-editor float-right">
+<a class="text-disabled mr-2" data-target="#reminder-modal" data-toggle="modal" href="#"> <i class="flaticon-pencil"> </i> Edit </a>
+<a class="text-disabled ms-delete-trigger" href="#"> <i class="flaticon-trash"> </i> Delete </a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="tab-pane" id="qa-notes" role="tabpanel">
+<ul class="ms-qa-options">
+<li> <a data-target="#notes-modal" data-toggle="modal" href="#"> <i class="flaticon-sticky-note"></i> New Note </a> </li>
+<li> <a href="#"> <i class="flaticon-excel"></i> Export to Excel </a> </li>
+</ul>
+<div class="ms-quickbar-container ms-scrollable">
+<div class="ms-card ms-qa-card ms-deletable">
+<div class="ms-card-header">
+<h6 class="ms-card-title">Don't forget to check with the designer</h6>
+</div>
+<div class="ms-card-body">
+<p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vulputate urna in faucibus venenatis. Etiam at dapibus neque,
+                  vel varius metus. Pellentesque eget orci malesuada, venenatis magna et
+                </p>
+<ul class="ms-note-members clearfix mb-0">
+<li class="ms-deletable"> <img alt="member" src="https://metropolitanhost.com/themes/templatemoster/html/weeducate/assets/img/we-educate/topper-3.jpg"/> </li>
+<li class="ms-deletable"> <img alt="member" src="https://metropolitanhost.com/themes/templatemoster/html/weeducate/assets/img/we-educate/topper-4.jpg"/> </li>
+</ul>
+</div>
+<div class="ms-card-footer clearfix">
+<div class="dropdown float-left">
+<a aria-expanded="false" aria-haspopup="true" class="text-disabled" data-toggle="dropdown" href="#">
+<i class="flaticon-share-1"></i> Share
+                  </a>
+<ul class="dropdown-menu">
+<li class="dropdown-menu-header">
+<h6 class="dropdown-header ms-inline m-0"><span class="text-disabled">Share With</span></h6>
+</li>
+<li class="dropdown-divider"></li>
+<li class="ms-scrollable ms-dropdown-list ms-members-list">
+<a class="media p-2" href="#">
+<div class="mr-2 align-self-center">
+<img alt="people" class="ms-img-round" src="https://metropolitanhost.com/themes/templatemoster/html/weeducate/assets/img/we-educate/topper-5.jpg"/>
+</div>
+<div class="media-body">
+<span>John Doe</span>
+</div>
+</a>
+<a class="media p-2" href="#">
+<div class="mr-2 align-self-center">
+<img alt="people" class="ms-img-round" src="https://metropolitanhost.com/themes/templatemoster/html/weeducate/assets/img/we-educate/topper-4.jpg"/>
+</div>
+<div class="media-body">
+<span>Raymart Sandiago</span>
+</div>
+</a>
+<a class="media p-2" href="#">
+<div class="mr-2 align-self-center">
+<img alt="people" class="ms-img-round" src="https://metropolitanhost.com/themes/templatemoster/html/weeducate/assets/img/we-educate/topper-2.jpg"/>
+</div>
+<div class="media-body">
+<span>Heather Brown</span>
+</div>
+</a>
+</li>
+</ul>
+</div>
+<div class="ms-note-editor float-right">
+<a class="text-disabled mr-2" data-target="#notes-modal" data-toggle="modal" href="#"> <i class="flaticon-pencil"> </i> Edit </a>
+<a class="text-disabled ms-delete-trigger" href="#"> <i class="flaticon-trash"> </i> Delete </a>
+</div>
+</div>
+</div>
+<div class="ms-card ms-qa-card ms-deletable">
+<div class="ms-card-header">
+<h6 class="ms-card-title">Perform the required unit tests</h6>
+</div>
+<div class="ms-card-body">
+<p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vulputate urna in faucibus venenatis. Etiam at dapibus neque,
+                  vel varius metus. Pellentesque eget orci malesuada, venenatis magna et
+                </p>
+<ul class="ms-note-members clearfix mb-0">
+<li class="ms-deletable"> <img alt="member" src="https://metropolitanhost.com/themes/templatemoster/html/weeducate/assets/img/we-educate/topper-1.jpg"/> </li>
+</ul>
+</div>
+<div class="ms-card-footer clearfix">
+<div class="dropdown float-left">
+<a aria-expanded="false" aria-haspopup="true" class="text-disabled" data-toggle="dropdown" href="#">
+<i class="flaticon-share-1"></i> Share
+                  </a>
+<ul class="dropdown-menu">
+<li class="dropdown-menu-header">
+<h6 class="dropdown-header ms-inline m-0"><span class="text-disabled">Share With</span></h6>
+</li>
+<li class="dropdown-divider"></li>
+<li class="ms-scrollable ms-dropdown-list ms-members-list">
+<a class="media p-2" href="#">
+<div class="mr-2 align-self-center">
+<img alt="people" class="ms-img-round" src="https://metropolitanhost.com/themes/templatemoster/html/weeducate/assets/img/we-educate/topper-5.jpg"/>
+</div>
+<div class="media-body">
+<span>John Doe</span>
+</div>
+</a>
+<a class="media p-2" href="#">
+<div class="mr-2 align-self-center">
+<img alt="people" class="ms-img-round" src="https://metropolitanhost.com/themes/templatemoster/html/weeducate/assets/img/we-educate/topper-4.jpg"/>
+</div>
+<div class="media-body">
+<span>Raymart Sandiago</span>
+</div>
+</a>
+<a class="media p-2" href="#">
+<div class="mr-2 align-self-center">
+<img alt="people" class="ms-img-round" src="https://metropolitanhost.com/themes/templatemoster/html/weeducate/assets/img/we-educate/topper-1.jpg"/>
+</div>
+<div class="media-body">
+<span>Heather Brown</span>
+</div>
+</a>
+</li>
+</ul>
+</div>
+<div class="ms-note-editor float-right">
+<a class="text-disabled mr-2" data-target="#notes-modal" data-toggle="modal" href="#"> <i class="flaticon-pencil"> </i> Edit </a>
+<a class="text-disabled ms-delete-trigger" href="#"> <i class="flaticon-trash"> </i> Delete </a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="tab-pane" id="qa-invite" role="tabpanel">
+<div class="ms-quickbar-container text-center ms-invite-member">
+<i class="flaticon-network"></i>
+<p>Invite Team Members</p>
+<form>
+<div class="ms-form-group">
+<input class="form-control" name="invite-email" placeholder="Member Email" type="text" value=""/>
+</div>
+<div class="ms-form-group">
+<button class="btn btn-primary w-100" name="invite-member" type="submit">Invite</button>
+</div>
+</form>
+</div>
+</div>
+</div>
+</div>
 </aside>
-
 <!-- MODALS -->
 <!-- Reminder Modal -->
 <div aria-labelledby="reminder-modal" class="modal fade" id="reminder-modal" role="dialog" tabindex="-1">
@@ -789,31 +1189,6 @@
 <!-- Settings -->
 
 <!-- Page Specific Scripts Start -->
-<script>
-  kakao.maps.load(function() {
-    // 지도 컨테이너
-    var container = document.getElementById('map');
-    var options = {
-      center: new kakao.maps.LatLng(35.869452, 128.595678), // 대구 한국IT교육원 좌표
-      level: 3
-    };
-
-    // 지도 생성
-    var map = new kakao.maps.Map(container, options);
-
-    // 마커 생성
-    var marker = new kakao.maps.Marker({
-      position: new kakao.maps.LatLng(35.869452, 128.595678)
-    });
-    marker.setMap(map);
-
-    // 인포윈도우 (말풍선)
-    var infowindow = new kakao.maps.InfoWindow({
-      content: '<div style="padding:5px;font-size:13px;">한국IT교육원</div>'
-    });
-    infowindow.open(map, marker);
-  });
-</script>
 
 
 <script src="assets/js/dashboard.js"></script></body>
