@@ -21,7 +21,7 @@ body {
 
 /* 헤더 스타일 */
 .navbar {
-  background: linear-gradient(to right, #007bff, #00c6ff);
+  background: linear-gradient(to right, #fdfeff, #00c6ff);
   color: #fff;
 }
 .navbar a {
@@ -51,7 +51,7 @@ body {
   box-shadow: 0 4px 10px rgb(247, 248, 248);
 }
 .card-header {
-  background-color: #007bff;
+  background-color: #fafafa;
   color: #fff;
   font-weight: bold;
 }
