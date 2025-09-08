@@ -17,5 +17,8 @@ https://claude.ai/
 달력/일정 제작
 
 3번째 미니바 급식메뉴 추가 예정
-나이스교육정보개방포털 이용 예정 -  https://open.neis.go.kr/portal/myPage/myPage.do작업할 주소
-틀은 만들었고 api 연동 마저 해야함
+나이스교육정보개방포털 이용 예정 -  https://open.neis.go.kr/portal/myPage/myPage.do 
+
+api 연동 후 영주동부초등학교로 연결
+https://open.neis.go.kr/hub/schoolInfo?KEY=1a70a5506a3e42a882e2e1ef7d0d1a12&Type=json&SCHUL_NM=영주동부초등학교
+학교 코드 찾기

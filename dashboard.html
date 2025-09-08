@@ -700,9 +700,9 @@
             <span class="ms-quick-bar-label">주소</span>
           </a>
         </li>
-        <!-- Attendance -->
+        <!-- meal -->
         <li class="ms-quick-bar-item ms-has-qa">
-          <a data-toggle="tab" href="#qa-attendance" role="tab">
+          <a data-toggle="tab" href="#qa-meal" role="tab">
             <i class="flaticon-user"></i>
             <span class="ms-quick-bar-label">급식</span>
           </a>
@@ -736,15 +736,17 @@
             </div>
           </div>
 
-         <!-- Quickbar - 3번째 탭 (급식) -->
-<div role="tabpanel" class="tab-pane fade" id="qa-meal">
-  <h6>🍴 급식 조회</h6>
-  <div class="meal-search">
-    <input type="date" id="meal-date" class="form-control" />
-    <button id="meal-btn" class="btn btn-primary">조회</button>
-  </div>
-  <div id="meal-result"></div>
-</div>
+          <!-- Quickbar - 3번째 탭 (급식) -->
+          <div role="tabpanel" class="tab-pane fade" id="qa-meal">
+            <h6>🍴 급식 조회</h6>
+            <div class="meal-search">
+              <input type="date" id="meal-date" class="form-control" />
+              <button id="meal-btn" class="btn btn-primary">조회</button>
+            </div>
+            <div id="meal-result">급식 정보를 불러오는 중...</div>
+          </div>
+
+
 
 
         </div>

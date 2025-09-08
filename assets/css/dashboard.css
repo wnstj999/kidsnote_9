@@ -98,3 +98,21 @@ body {
 .fc-event.lesson  { background: #4CAF50; }  /* 수업 */
 .fc-event.lunch   { background: #FF9800; }  /* 점심 */
 .fc-event.meeting { background: #2196F3; }  /* 상담 */
+
+/* 급식 영역 */
+#meal-result {
+  margin-top: 10px;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background: #fff;
+  font-size: 14px;
+  line-height: 1.6;
+  white-space: pre-line; /* 줄바꿈 유지 */
+}
+
+.meal-search {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 10px;
+}
