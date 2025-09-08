@@ -1,0 +1,57 @@
+/* ===== 외부 CSS 통합 ===== */
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css");
+@import url("https://metropolitanhost.com/themes/templatemoster/html/weeducate/assets/css/bootstrap.min.css");
+@import url("https://metropolitanhost.com/themes/templatemoster/html/weeducate/assets/css/jquery-ui.min.css");
+@import url("https://metropolitanhost.com/themes/templatemoster/html/weeducate/assets/css/slick.css");
+@import url("style.css");
+
+/* ===== 커스텀 CSS 작성 공간 ===== */
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+
+/* ===== 커스텀 CSS 예시 ===== */
+
+/* 전체 배경색 */
+body {
+  background-color: #f4f6f9;
+}
+
+/* 헤더 스타일 */
+.navbar {
+  background: linear-gradient(to right, #007bff, #00c6ff);
+  color: #fff;
+}
+.navbar a {
+  color: #fff !important;
+}
+
+/* 사이드바 스타일 */
+#ms-side-nav {
+  background-color: #ffffff;
+}
+#ms-side-nav .menu-item a {
+  color: #bbb;
+}
+#ms-side-nav .menu-item a:hover {
+  color: #fff;
+}
+
+/* Professors 메뉴 강조 */
+#ms-side-nav .menu-item.active > a {
+  color: #ff9800 !important;
+  font-weight: bold;
+}
+
+/* 카드 기본 스타일 */
+.card {
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgb(247, 248, 248);
+}
+.card-header {
+  background-color: #007bff;
+  color: #fff;
+  font-weight: bold;
+}
