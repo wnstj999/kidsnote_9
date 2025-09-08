@@ -1,795 +1,858 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
-<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
-<meta content="width=device-width,initial-scale=1" name="viewport"/>
-<title>Weeducate</title>
-<!-- Iconic Fonts -->
+  <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+  <meta content="IE=edge" http-equiv="X-UA-Compatible" />
+  <meta content="width=device-width,initial-scale=1" name="viewport" />
+  <title>Weeducate</title>
+  <!-- Iconic Fonts -->
 
-<!-- Iconic Fonts -->
-<!-- 구글 Material Icons -->
+  <!-- Iconic Fonts -->
+  <!-- 구글 Material Icons -->
 
-<!-- Font Awesome 최신 CDN -->
+  <!-- Font Awesome 최신 CDN -->
 
-<!-- Flaticon 대체 (없으면 깨짐) -->
-<!-- 원래 템플릿은 flaticon.css + 로컬 폰트 필요 → 없으니 CDN이나 Font Awesome 아이콘으로 교체 추천 -->
-<!-- 필요하다면 Flaticon에서 직접 다운로드: https://www.flaticon.com/ -->
-<!-- Bootstrap core CSS -->
+  <!-- Flaticon 대체 (없으면 깨짐) -->
+  <!-- 원래 템플릿은 flaticon.css + 로컬 폰트 필요 → 없으니 CDN이나 Font Awesome 아이콘으로 교체 추천 -->
+  <!-- 필요하다면 Flaticon에서 직접 다운로드: https://www.flaticon.com/ -->
+  <!-- Bootstrap core CSS -->
 
-<!-- jQuery UI -->
+  <!-- jQuery UI -->
 
-<!-- Page Specific CSS (Slick Slider.css) -->
+  <!-- Page Specific CSS (Slick Slider.css) -->
 
-<!-- Weeducate styles -->
+  <!-- Weeducate styles -->
 
-<!-- Favicon -->
+  <!-- Favicon -->
 
-<link href="assets/css/dashboard.css" rel="stylesheet"/></head>
+  <link href="assets/css/dashboard.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.11/main.min.css" rel="stylesheet" />
+
+</head>
+
 <body class="ms-body ms-aside-left-open ms-primary-theme ms-has-quickbar">
-<!-- Setting Panel -->
-<div class="ms-toggler ms-settings-toggle ms-d-block-lg">
-<i class="flaticon-paint"></i>
-</div>
-<div class="ms-settings-panel ms-d-block-lg">
-<div class="row">
-<div class="col-xl-4 col-md-4">
-<h4 class="section-title">Customize</h4>
-<div>
-<label class="ms-switch">
-<input id="dark-mode" type="checkbox"/>
-<span class="ms-switch-slider round"></span>
-</label>
-<span> Dark Mode </span>
-</div>
-<div>
-<label class="ms-switch">
-<input id="remove-quickbar" type="checkbox"/>
-<span class="ms-switch-slider round"></span>
-</label>
-<span> Remove Quickbar </span>
-</div>
-</div>
-<div class="col-xl-4 col-md-4">
-<h4 class="section-title">Keyboard Shortcuts</h4>
-<p class="ms-directions mb-0"><code>Esc</code> Close Quick Bar</p>
-<p class="ms-directions mb-0"><code>Alt + (1 -&gt; 6)</code> Open Quick Bar Tab</p>
-<p class="ms-directions mb-0"><code>Alt + Q</code> Enable Quick Bar Configure Mode</p>
-</div>
-</div>
-</div>
-<!-- Preloader -->
-<div id="preloader-wrap">
-<div class="spinner spinner-8">
-<div class="ms-circle1 ms-child"></div>
-<div class="ms-circle2 ms-child"></div>
-<div class="ms-circle3 ms-child"></div>
-<div class="ms-circle4 ms-child"></div>
-<div class="ms-circle5 ms-child"></div>
-<div class="ms-circle6 ms-child"></div>
-<div class="ms-circle7 ms-child"></div>
-<div class="ms-circle8 ms-child"></div>
-<div class="ms-circle9 ms-child"></div>
-<div class="ms-circle10 ms-child"></div>
-<div class="ms-circle11 ms-child"></div>
-<div class="ms-circle12 ms-child"></div>
-</div>
-</div>
-<!-- Overlays -->
-<div class="ms-aside-overlay ms-overlay-left ms-toggler" data-target="#ms-side-nav" data-toggle="slideLeft"></div>
-<div class="ms-aside-overlay ms-overlay-right ms-toggler" data-target="#ms-recent-activity" data-toggle="slideRight"></div>
-<!-- Sidebar Navigation Left -->
-<aside class="side-nav fixed ms-aside-scrollable ms-aside-left" id="ms-side-nav">
-<!-- Logo -->
-<div class="logo-sn ms-d-block-lg">
-<a class="pl-0 ml-0 text-center" href="index.html"><img alt="logo" src="https://metropolitanhost.com/themes/templatemoster/html/weeducate/assets/img/logo/weeducate-4.png"/> </a>
-</div>
-<!-- Navigation -->
-<ul class="accordion ms-main-aside fs-14" id="side-nav-accordion">
-<!-- Dashboard -->
-<!-- /Dashboard -->
-<!--Proessors Start-->
-<li class="menu-item">
-<a aria-controls="dashboard" aria-expanded="false" class="has-chevron" data-target="#professor" data-toggle="collapse" href="#">
-<span><i class="fa fa-user fs-16"></i>Professors</span>
-</a>
-<ul aria-labelledby="dashboard" class="collapse" data-parent="#side-nav-accordion" id="professor">
-<li> <a href="https://metropolitanhost.com/themes/templatemoster/html/weeducate/pagesprofessors/allprofessor.html">All Professors</a> </li>
-<li> <a href="https://metropolitanhost.com/themes/templatemoster/html/weeducate/pagesprofessors/addprofessor.html">Add Professors</a> </li>
-<li> <a href="https://metropolitanhost.com/themes/templatemoster/html/weeducate/pagesprofessors/aboutprofessor.html">About Professors</a> </li>
-</ul>
-</li>
-<!-- /Proessors End--->
-<!--Courses Start-->
-<!-- /Courses End--->
-<!--Student Start-->
-<!-- /Student End--->
-<!--Staff Start-->
-<!-- /Staff End--->
-<!--Fees Start-->
-<!-- /Fees End--->
-<!--Departement Start-->
-<!-- /Departemnt End--->
-<!--Holiday Start-->
-<!-- /Holiday End--->
-<!--Bonus Pages -->
-<!-- /Bonus Pages -->
-<!-- Basic UI Elements -->
-<!-- /Basic UI Elements -->
-<!-- Advanced UI Elements -->
-<!-- /Advanced UI Elements -->
-<!-- Form Elements -->
-<!-- /Form Elements -->
-<!-- Charts -->
-<!-- /Charts -->
-<!-- Tables -->
-<!-- /Tables -->
-<!-- Popups -->
-<!-- /Popups -->
-<!-- Icons -->
-<!-- /Icons -->
-<!-- Maps -->
-<!-- /Maps -->
-<!-- Pages -->
-<!-- /Pages -->
-<!-- Apps -->
-<!-- /Apps -->
-</ul>
-</aside>
-<!-- Sidebar Right -->
-<aside class="side-nav fixed ms-aside-right ms-scrollable" id="ms-recent-activity">
-<div class="ms-aside-header">
-<ul class="nav nav-tabs tabs-bordered d-flex nav-justified mb-3" role="tablist">
-<li class="fs-12" role="presentation"><a aria-controls="activityLog" class="active" data-toggle="tab" href="#activityLog" role="tab"> Activity Log</a></li>
-<li class="fs-12" role="presentation"><a aria-controls="recentPosts" data-toggle="tab" href="#recentPosts" role="tab"> Settings </a></li>
-<li><button class="close ms-toggler text-center" data-target="#ms-recent-activity" data-toggle="slideRight" type="button"><span aria-hidden="true">×</span></button></li>
-</ul>
-</div>
-<div class="ms-aside-body">
-<div class="tab-content">
-<div class="tab-pane active fade show" id="activityLog" role="tabpanel">
-<ul class="ms-activity-log">
-<li>
-<div class="ms-btn-icon btn-pill icon btn-light">
-<i class="flaticon-gear"></i>
-</div>
-<h6>Update 1.0.0 Pushed</h6>
-<span> <i class="material-icons">event</i>1 January, 2021</span>
-<p class="fs-14">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque scelerisque diam non nisi semper, ula in sodales vehicula....</p>
-</li>
-<li>
-<div class="ms-btn-icon btn-pill icon btn-success">
-<i class="flaticon-tick-inside-circle"></i>
-</div>
-<h6>Profile Updated</h6>
-<span> <i class="material-icons">event</i>4 March, 2018</span>
-<p class="fs-14">Curabitur purus sem, malesuada eu luctus eget, suscipit sed turpis. Nam pellentesque felis vitae justo accumsan, sed semper nisi sollicitudin...</p>
-</li>
-<li>
-<div class="ms-btn-icon btn-pill icon btn-warning">
-<i class="flaticon-alert-1"></i>
-</div>
-<h6>Your payment is due</h6>
-<span> <i class="material-icons">event</i>1 January, 2021</span>
-<p class="fs-14">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque scelerisque diam non nisi semper, ula in sodales vehicula....</p>
-</li>
-<li>
-<div class="ms-btn-icon btn-pill icon btn-danger">
-<i class="flaticon-alert"></i>
-</div>
-<h6>Database Error</h6>
-<span> <i class="material-icons">event</i>4 March, 2018</span>
-<p class="fs-14">Curabitur purus sem, malesuada eu luctus eget, suscipit sed turpis. Nam pellentesque felis vitae justo accumsan, sed semper nisi sollicitudin...</p>
-</li>
-<li>
-<div class="ms-btn-icon btn-pill icon btn-info">
-<i class="flaticon-information"></i>
-</div>
-<h6>Checkout what's Trending</h6>
-<span> <i class="material-icons">event</i>1 January, 2021</span>
-<p class="fs-14">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque scelerisque diam non nisi semper, ula in sodales vehicula....</p>
-</li>
-<li>
-<div class="ms-btn-icon btn-pill icon btn-secondary">
-<i class="flaticon-diamond"></i>
-</div>
-<h6>Your Dashboard is ready</h6>
-<span> <i class="material-icons">event</i>4 March, 2018</span>
-<p class="fs-14">Curabitur purus sem, malesuada eu luctus eget, suscipit sed turpis. Nam pellentesque felis vitae justo accumsan, sed semper nisi sollicitudin...</p>
-</li>
-</ul>
-<a class="btn btn-primary d-block" href="#"> View All </a>
-</div>
-<div class="tab-pane fade" id="recentPosts" role="tabpanel">
-<h6>General Settings</h6>
-<div class="ms-form-group">
-<span class="ms-option-name fs-14">Location Tracking</span>
-<label class="ms-switch float-right">
-<input type="checkbox"/>
-<span class="ms-switch-slider round"></span>
-</label>
-</div>
-<div class="ms-form-group">
-<span class="ms-option-name fs-14">Allow Notifications</span>
-<label class="ms-switch float-right">
-<input type="checkbox"/>
-<span class="ms-switch-slider round"></span>
-</label>
-</div>
-<div class="ms-form-group">
-<span class="ms-option-name fs-14">Allow Popups</span>
-<label class="ms-switch float-right">
-<input checked="" type="checkbox"/>
-<span class="ms-switch-slider round"></span>
-</label>
-</div>
-<h6>Log Settings</h6>
-<div class="ms-form-group">
-<span class="ms-option-name fs-14">Enable Logging</span>
-<label class="ms-switch float-right">
-<input checked="" type="checkbox"/>
-<span class="ms-switch-slider round"></span>
-</label>
-</div>
-<div class="ms-form-group">
-<span class="ms-option-name fs-14">Audit Logs</span>
-<label class="ms-switch float-right">
-<input type="checkbox"/>
-<span class="ms-switch-slider round"></span>
-</label>
-</div>
-<div class="ms-form-group">
-<span class="ms-option-name fs-14">Error Logs</span>
-<label class="ms-switch float-right">
-<input checked="" type="checkbox"/>
-<span class="ms-switch-slider round"></span>
-</label>
-</div>
-<h6>Advanced Settings</h6>
-<div class="ms-form-group">
-<span class="ms-option-name fs-14">Enable Logging</span>
-<label class="ms-switch float-right">
-<input checked="" type="checkbox"/>
-<span class="ms-switch-slider round"></span>
-</label>
-</div>
-<div class="ms-form-group">
-<span class="ms-option-name fs-14">Audit Logs</span>
-<label class="ms-switch float-right">
-<input type="checkbox"/>
-<span class="ms-switch-slider round"></span>
-</label>
-</div>
-<div class="ms-form-group">
-<span class="ms-option-name fs-14">Error Logs</span>
-<label class="ms-switch float-right">
-<input checked="" type="checkbox"/>
-<span class="ms-switch-slider round"></span>
-</label>
-</div>
-</div>
-</div>
-</div>
-</aside>
-<!-- Main Content -->
-<main class="body-content">
-<!-- Navigation Bar -->
-<nav class="navbar ms-navbar bg-blue-500 p-4">
-  <span class="text-white font-bold text-lg">내 프로젝트</span>
-</nav>
-<!-- Body Content Wrapper -->
-<!-- Body Content Wrapper -->
-<div class="ms-content-wrapper">
-<!-- Icon cards Widget -->
-<div class="row">
-<div class="col-xl-3 col-md-6">
-<div class="ms-card card-gradient-success ms-widget ms-infographics-widget">
-<div class="ms-card-body media">
-<div class="media-body">
-<h6>Total Students</h6>
-<p class="ms-card-change"> <i class="material-icons">arrow_upward</i> 450</p>
-<p class="fs-12">48% increase</p>
-</div>
-</div>
-<i class="fa fa-user"></i>
-</div>
-</div>
-<div class="col-xl-3 col-md-6">
-<div class="ms-card card-gradient-secondary ms-widget ms-infographics-widget">
-<div class="ms-card-body media">
-<div class="media-body">
-<h6>Total Fees</h6>
-<p class="ms-card-change"> $30,950</p>
-<p class="fs-12">22% increase</p>
-</div>
-</div>
-<i class="fas fa-dollar-sign"></i>
-</div>
-</div>
-<div class="col-xl-3 col-md-6">
-<div class="ms-card card-gradient-warning ms-widget ms-infographics-widget">
-<div class="ms-card-body media">
-<div class="media-body">
-<h6>Total Student</h6>
-<p class="ms-card-change"> <i class="material-icons">arrow_upward</i> 4567</p>
-<p class="fs-12">78% increase</p>
-</div>
-</div>
-<i class="fa fa-users"></i>
-</div>
-</div>
-<div class="col-xl-3 col-md-6">
-<div class="ms-card card-gradient-info ms-widget ms-infographics-widget">
-<div class="ms-card-body media">
-<div class="media-body">
-<h6>Total Courses</h6>
-<p class="ms-card-change"> 50</p>
-<p class="fs-12">62% increase</p>
-</div>
-</div>
-<i class="fa fa-graduation-cap"></i>
-</div>
-</div>
-</div>
-<div class="row">
-<div class="col-xl-6 col-md-12">
-<div class="ms-panel">
-<div class="ms-panel-header">
-<h6> Universties Toppers</h6>
-<a aria-controls="popups" aria-expanded="false" class="fa fa-chevron-down float-right" data-target="#topper" data-toggle="collapse"> </a>
-</div>
-<div class="ms-panel-body" id="topper">
-<div class="table-responsive">
-<table class="table table-hover">
-<thead>
-<tr>
-<th scope="col">Name</th>
-<th scope="col">Rank</th>
-<th scope="col">Persentage</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="ms-table-f-w"> <img alt="people" src="https://metropolitanhost.com/themes/templatemoster/html/weeducate/assets/img/we-educate/topper-1.jpg"/> Chihoo Hwang </td>
-<td>1</td>
-<td>99.9%</td>
-</tr>
-<tr>
-<td class="ms-table-f-w"> <img alt="people" src="https://metropolitanhost.com/themes/templatemoster/html/weeducate/assets/img/we-educate/topper-2.jpg"/> Ajay Suryavanash </td>
-<td>2</td>
-<td>98%</td>
-</tr>
-<tr>
-<td class="ms-table-f-w"> <img alt="people" src="https://metropolitanhost.com/themes/templatemoster/html/weeducate/assets/img/we-educate/topper-3.jpg"/> Johnson </td>
-<td>3</td>
-<td>97%</td>
-</tr>
-<tr>
-<td class="ms-table-f-w"> <img alt="people" src="https://metropolitanhost.com/themes/templatemoster/html/weeducate/assets/img/we-educate/topper-5.jpg"/> John Doe </td>
-<td>5</td>
-<td>93%</td>
-</tr>
-<tr>
-<td class="ms-table-f-w"> <img alt="people" src="https://metropolitanhost.com/themes/templatemoster/html/weeducate/assets/img/we-educate/topper-6.jpg"/> John Doe </td>
-<td>6</td>
-<td>92%</td>
-</tr>
-<tr>
-<td class="ms-table-f-w"> <img alt="people" src="https://metropolitanhost.com/themes/templatemoster/html/weeducate/assets/img/we-educate/topper-2.jpg"/> John Doe<br/> </td>
-<td>7</td>
-<td>91%</td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-</div>
-</div>
-<div class="col-xl-6 col-md-12">
-<div class="ms-panel pb-8">
-<div class="ms-panel-header">
-<h6>Course Table</h6>
-<a aria-controls="popups" aria-expanded="false" class="fa fa-chevron-down float-right" data-target="#course" data-toggle="collapse"> </a>
-</div>
-<div class="ms-panel-body" id="course">
-<div class="table-responsive">
-<table class="table table-bordered">
-<thead>
-<tr>
-<th scope="col">#</th>
-<th scope="col">Courses</th>
-<th scope="col">Professors</th>
-<th scope="col">Fees</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<th scope="row">1</th>
-<td>Java</td>
-<td>John Kery</td>
-<td>130$</td>
-</tr>
-<tr>
-<th scope="row">2</th>
-<td>Php</td>
-<td>Johnson</td>
-<td>140$</td>
-</tr>
-<tr>
-<th scope="row">3</th>
-<td>Anguler</td>
-<td>Kevin Owens</td>
-<td>120$</td>
-</tr>
-<tr>
-<th scope="row">4</th>
-<td>React JS</td>
-<td>Kety Perey</td>
-<td>170$</td>
-</tr>
-<tr>
-<th scope="row">5</th>
-<td>.Net</td>
-<td>Kevin shai</td>
-<td>110$</td>
-</tr>
-<tr>
-<th scope="row">6</th>
-<td>Javascript</td>
-<td>John Kesy</td>
-<td>90$</td>
-</tr>
-<tr>
-<th scope="row">7</th>
-<td>Kotline</td>
-<td>Alura</td>
-<td>180$</td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="row">
-<div class="col-xl-6 col-md-12">
-<div class="ms-panel">
-<div class="ms-panel-header">
-<h6>University Results</h6>
-<a aria-controls="popups" aria-expanded="false" class="fa fa-chevron-down float-right" data-target="#graph" data-toggle="collapse"> </a>
-</div>
-<div class="ms-panel-body" id="graph">
-<canvas id="bar-chart"></canvas>
-</div>
-</div>
-</div>
-<div class="col-xl-6 col-md-12">
-<div class="ms-panel height-84">
-<div class="ms-panel-header">
-<h6>Excellent Toppers</h6>
-</div>
-<div class="ms-panel-body">
-<div class="table-responsive">
-<table class="table table-hover">
-<thead>
-<tr>
-<th scope="col">Name</th>
-<th scope="col">Rank</th>
-<th scope="col">Persentage</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="ms-table-f-w">  Chihoo Hwang </td>
-<td>1</td>
-<td>99.9%</td>
-</tr>
-<tr>
-<td class="ms-table-f-w">  Ajay Suryavanash </td>
-<td>2</td>
-<td>98%</td>
-</tr>
-<tr>
-<td class="ms-table-f-w"> Johnson </td>
-<td>3</td>
-<td>97%</td>
-</tr>
-<tr>
-<td class="ms-table-f-w">  Kalvish </td>
-<td>4</td>
-<td>96%</td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="row">
-<div class="col-xl-12 col-md-12">
-<div class="ms-panel">
-<div class="ms-panel-header">
-<h6>New Student List</h6>
-<a aria-controls="popups" aria-expanded="false" class="fa fa-chevron-down float-right" data-target="#list" data-toggle="collapse"> </a>
-</div>
-<div class="ms-panel-body" id="list">
-<div class="table-responsive">
-<table class="table table-hover">
-<thead>
-<tr>
-<th scope="col">Name</th>
-<th scope="col">Head Of Departements</th>
-<th scope="col">Date of Admit</th>
-<th scope="col">fees</th>
-<th scope="col">Branch</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="ms-table-f-w"> <img alt="people" src="https://metropolitanhost.com/themes/templatemoster/html/weeducate/assets/img/we-educate/topper-1.jpg"/> Chihoo Hwang </td>
-<td>Joan</td>
-<td>27/5/2021</td>
-<td>paid</td>
-<td>Meachnical</td>
-</tr>
-<tr>
-<td class="ms-table-f-w"> <img alt="people" src="https://metropolitanhost.com/themes/templatemoster/html/weeducate/assets/img/we-educate/topper-3.jpg"/> Ajay Suryavanash </td>
-<td>Moxely</td>
-<td>11/6/2021</td>
-<td>Unpaid</td>
-<td>Electrical</td>
-</tr>
-<tr>
-<td class="ms-table-f-w"> <img alt="people" src="https://metropolitanhost.com/themes/templatemoster/html/weeducate/assets/img/we-educate/topper-5.jpg"/> Johny martin </td>
-<td>Rich Flair</td>
-<td>26/5/2021</td>
-<td>paid</td>
-<td>Computer</td>
-</tr>
-<tr>
-<td class="ms-table-f-w"> <img alt="people" src="https://metropolitanhost.com/themes/templatemoster/html/weeducate/assets/img/we-educate/topper-6.jpg"/> Noxin Lee </td>
-<td>Tony</td>
-<td>20/7/2021</td>
-<td>unpaid</td>
-<td>Civil</td>
-</tr>
-<tr>
-<td class="ms-table-f-w"> <img alt="people" src="https://metropolitanhost.com/themes/templatemoster/html/weeducate/assets/img/we-educate/topper-2.jpg"/>Jackey</td>
-<td>Bilgates</td>
-<td>11/4/2021</td>
-<td>paid</td>
-<td>Computer</td>
-</tr>
-<tr>
-<td class="ms-table-f-w"> <img alt="people" src="https://metropolitanhost.com/themes/templatemoster/html/weeducate/assets/img/we-educate/topper-5.jpg"/>Rocky </td>
-<td>Stephan</td>
-<td>24/6/2021</td>
-<td>unpaid</td>
-<td>Electronics</td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</main>
-<!--   Quick bar -->
-<aside class="ms-quick-bar fixed ms-d-block-lg" id="ms-quick-bar">
-<ul class="nav nav-tabs ms-quick-bar-list" role="tablist">
-<li class="ms-quick-bar-item ms-has-qa" data-placement="left" data-title="Chat" data-toggle="tooltip" role="presentation" title="Launch Chat">
-<a aria-controls="qa-chat" data-toggle="tab" href="#qa-chat" role="tab">
-<i class="flaticon-chat"></i>
-<span class="ms-quick-bar-label">Chat</span>
-</a>
-</li>
-<li class="ms-quick-bar-item ms-has-qa" data-placement="left" data-title="Email" data-toggle="tooltip" role="presentation" title="Launch Email">
-<a aria-controls="qa-email" data-toggle="tab" href="#qa-email" role="tab">
-<i class="flaticon-mail"></i>
-<span class="ms-quick-bar-label">Email</span>
-</a>
-</li>
-<li class="ms-quick-bar-item ms-has-qa" data-placement="left" data-title="To-do-list" data-toggle="tooltip" role="presentation" title="Launch To-do-list">
-<a aria-controls="qa-toDo" data-toggle="tab" href="#qa-toDo" role="tab">
-<i class="flaticon-list"></i>
-<span class="ms-quick-bar-label">To-do</span>
-</a>
-</li>
-<li class="ms-quick-bar-item ms-has-qa" data-placement="left" data-title="Reminders" data-toggle="tooltip" role="presentation" title="Launch Reminders">
-<a aria-controls="qa-reminder" data-toggle="tab" href="#qa-reminder" role="tab">
-<i class="flaticon-bell"></i>
-<span class="ms-quick-bar-label">Reminder</span>
-</a>
-</li>
-<li class="ms-quick-bar-item ms-has-qa" data-placement="left" data-title="Notes" data-toggle="tooltip" role="presentation" title="Launch Notes">
-<a aria-controls="qa-notes" data-toggle="tab" href="#qa-notes" role="tab">
-<i class="flaticon-pencil"></i>
-<span class="ms-quick-bar-label">Notes</span>
-</a>
-</li>
-<li class="ms-quick-bar-item ms-has-qa" data-placement="left" data-title="Invite Members" data-toggle="tooltip" role="presentation" title="Invite Members">
-<a aria-controls="qa-invite" data-toggle="tab" href="#qa-invite" role="tab">
-<i class="flaticon-share-1"></i>
-<span class="ms-quick-bar-label">Invite</span>
-</a>
-</li>
-</ul>
-<div class="ms-configure-qa" data-placement="left" data-toggle="tooltip" title="Configure Quick Access">
-<a href="#">
-<i class="flaticon-hammer"></i>
-<span class="ms-quick-bar-label">Configure</span>
-</a>
-</div>
-
-<!-- Quick bar -->
-<aside class="ms-quick-bar fixed ms-d-block-lg" id="ms-quick-bar">
-  <ul class="nav nav-tabs ms-quick-bar-list" role="tablist">
-    <!-- Calendar -->
-    <li class="ms-quick-bar-item ms-has-qa">
-      <a data-toggle="tab" href="#qa-calendar" role="tab">
-        <i class="flaticon-calendar"></i>
-        <span class="ms-quick-bar-label">일정</span>
-      </a>
-    </li>
-    <!-- Location -->
-    <li class="ms-quick-bar-item ms-has-qa">
-      <a data-toggle="tab" href="#qa-location" role="tab">
-        <i class="flaticon-map"></i>
-        <span class="ms-quick-bar-label">주소</span>
-      </a>
-    </li>
-    <!-- Attendance -->
-    <li class="ms-quick-bar-item ms-has-qa">
-      <a data-toggle="tab" href="#qa-attendance" role="tab">
-        <i class="flaticon-user"></i>
-        <span class="ms-quick-bar-label">Attendance</span>
-      </a>
-    </li>
-  </ul>
-
-  <div class="ms-quick-bar-content">
-    <div class="ms-quick-bar-header clearfix">
-      <h5 class="ms-quick-bar-title float-left">미니바</h5>
-      <button class="close ms-toggler" data-target="#ms-quick-bar" data-toggle="hideQuickBar">
-        <span aria-hidden="true">×</span>
-      </button>
+  <!-- Setting Panel -->
+  <div class="ms-toggler ms-settings-toggle ms-d-block-lg">
+    <i class="flaticon-paint"></i>
+  </div>
+  <div class="ms-settings-panel ms-d-block-lg">
+    <div class="row">
+      <div class="col-xl-4 col-md-4">
+        <h4 class="section-title">Customize</h4>
+        <div>
+          <label class="ms-switch">
+            <input id="dark-mode" type="checkbox" />
+            <span class="ms-switch-slider round"></span>
+          </label>
+          <span> Dark Mode </span>
+        </div>
+        <div>
+          <label class="ms-switch">
+            <input id="remove-quickbar" type="checkbox" />
+            <span class="ms-switch-slider round"></span>
+          </label>
+          <span> Remove Quickbar </span>
+        </div>
+      </div>
+      <div class="col-xl-4 col-md-4">
+        <h4 class="section-title">Keyboard Shortcuts</h4>
+        <p class="ms-directions mb-0"><code>Esc</code> Close Quick Bar</p>
+        <p class="ms-directions mb-0"><code>Alt + (1 -&gt; 6)</code> Open Quick Bar Tab</p>
+        <p class="ms-directions mb-0"><code>Alt + Q</code> Enable Quick Bar Configure Mode</p>
+      </div>
     </div>
-
-    <div class="ms-quick-bar-body tab-content">
-      <!-- Calendar -->
-      <div class="tab-pane fade show" id="qa-calendar" role="tabpanel">
-        <div class="p-3">
-          <h6>오늘 일정</h6>
-          <ul>
-            <li>10:00 수업 시작</li>
-            <li>12:00 점심</li>
-            <li>15:00 학부모 상담</li>
+  </div>
+  <!-- Preloader -->
+  <div id="preloader-wrap">
+    <div class="spinner spinner-8">
+      <div class="ms-circle1 ms-child"></div>
+      <div class="ms-circle2 ms-child"></div>
+      <div class="ms-circle3 ms-child"></div>
+      <div class="ms-circle4 ms-child"></div>
+      <div class="ms-circle5 ms-child"></div>
+      <div class="ms-circle6 ms-child"></div>
+      <div class="ms-circle7 ms-child"></div>
+      <div class="ms-circle8 ms-child"></div>
+      <div class="ms-circle9 ms-child"></div>
+      <div class="ms-circle10 ms-child"></div>
+      <div class="ms-circle11 ms-child"></div>
+      <div class="ms-circle12 ms-child"></div>
+    </div>
+  </div>
+  <!-- Overlays -->
+  <div class="ms-aside-overlay ms-overlay-left ms-toggler" data-target="#ms-side-nav" data-toggle="slideLeft"></div>
+  <div class="ms-aside-overlay ms-overlay-right ms-toggler" data-target="#ms-recent-activity" data-toggle="slideRight">
+  </div>
+  <!-- Sidebar Navigation Left -->
+  <aside class="side-nav fixed ms-aside-scrollable ms-aside-left" id="ms-side-nav">
+    <!-- Logo -->
+    <div class="logo-sn ms-d-block-lg">
+      <a class="pl-0 ml-0 text-center" href="index.html"><img alt="logo"
+          src="https://metropolitanhost.com/themes/templatemoster/html/weeducate/assets/img/logo/weeducate-4.png" />
+      </a>
+    </div>
+    <!-- Navigation -->
+    <ul class="accordion ms-main-aside fs-14" id="side-nav-accordion">
+      <!-- Dashboard -->
+      <!-- /Dashboard -->
+      <!--Proessors Start-->
+      <li class="menu-item">
+        <a aria-controls="dashboard" aria-expanded="false" class="has-chevron" data-target="#professor"
+          data-toggle="collapse" href="#">
+          <span><i class="fa fa-user fs-16"></i>Professors</span>
+        </a>
+        <ul aria-labelledby="dashboard" class="collapse" data-parent="#side-nav-accordion" id="professor">
+          <li> <a
+              href="https://metropolitanhost.com/themes/templatemoster/html/weeducate/pagesprofessors/allprofessor.html">All
+              Professors</a> </li>
+          <li> <a
+              href="https://metropolitanhost.com/themes/templatemoster/html/weeducate/pagesprofessors/addprofessor.html">Add
+              Professors</a> </li>
+          <li> <a
+              href="https://metropolitanhost.com/themes/templatemoster/html/weeducate/pagesprofessors/aboutprofessor.html">About
+              Professors</a> </li>
+        </ul>
+      </li>
+      <!-- /Proessors End--->
+      <!--Courses Start-->
+      <!-- /Courses End--->
+      <!--Student Start-->
+      <!-- /Student End--->
+      <!--Staff Start-->
+      <!-- /Staff End--->
+      <!--Fees Start-->
+      <!-- /Fees End--->
+      <!--Departement Start-->
+      <!-- /Departemnt End--->
+      <!--Holiday Start-->
+      <!-- /Holiday End--->
+      <!--Bonus Pages -->
+      <!-- /Bonus Pages -->
+      <!-- Basic UI Elements -->
+      <!-- /Basic UI Elements -->
+      <!-- Advanced UI Elements -->
+      <!-- /Advanced UI Elements -->
+      <!-- Form Elements -->
+      <!-- /Form Elements -->
+      <!-- Charts -->
+      <!-- /Charts -->
+      <!-- Tables -->
+      <!-- /Tables -->
+      <!-- Popups -->
+      <!-- /Popups -->
+      <!-- Icons -->
+      <!-- /Icons -->
+      <!-- Maps -->
+      <!-- /Maps -->
+      <!-- Pages -->
+      <!-- /Pages -->
+      <!-- Apps -->
+      <!-- /Apps -->
+    </ul>
+  </aside>
+  <!-- Sidebar Right -->
+  <aside class="side-nav fixed ms-aside-right ms-scrollable" id="ms-recent-activity">
+    <div class="ms-aside-header">
+      <ul class="nav nav-tabs tabs-bordered d-flex nav-justified mb-3" role="tablist">
+        <li class="fs-12" role="presentation"><a aria-controls="activityLog" class="active" data-toggle="tab"
+            href="#activityLog" role="tab"> Activity Log</a></li>
+        <li class="fs-12" role="presentation"><a aria-controls="recentPosts" data-toggle="tab" href="#recentPosts"
+            role="tab"> Settings </a></li>
+        <li><button class="close ms-toggler text-center" data-target="#ms-recent-activity" data-toggle="slideRight"
+            type="button"><span aria-hidden="true">×</span></button></li>
+      </ul>
+    </div>
+    <div class="ms-aside-body">
+      <div class="tab-content">
+        <div class="tab-pane active fade show" id="activityLog" role="tabpanel">
+          <ul class="ms-activity-log">
+            <li>
+              <div class="ms-btn-icon btn-pill icon btn-light">
+                <i class="flaticon-gear"></i>
+              </div>
+              <h6>Update 1.0.0 Pushed</h6>
+              <span> <i class="material-icons">event</i>1 January, 2021</span>
+              <p class="fs-14">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque scelerisque diam non
+                nisi semper, ula in sodales vehicula....</p>
+            </li>
+            <li>
+              <div class="ms-btn-icon btn-pill icon btn-success">
+                <i class="flaticon-tick-inside-circle"></i>
+              </div>
+              <h6>Profile Updated</h6>
+              <span> <i class="material-icons">event</i>4 March, 2018</span>
+              <p class="fs-14">Curabitur purus sem, malesuada eu luctus eget, suscipit sed turpis. Nam pellentesque
+                felis vitae justo accumsan, sed semper nisi sollicitudin...</p>
+            </li>
+            <li>
+              <div class="ms-btn-icon btn-pill icon btn-warning">
+                <i class="flaticon-alert-1"></i>
+              </div>
+              <h6>Your payment is due</h6>
+              <span> <i class="material-icons">event</i>1 January, 2021</span>
+              <p class="fs-14">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque scelerisque diam non
+                nisi semper, ula in sodales vehicula....</p>
+            </li>
+            <li>
+              <div class="ms-btn-icon btn-pill icon btn-danger">
+                <i class="flaticon-alert"></i>
+              </div>
+              <h6>Database Error</h6>
+              <span> <i class="material-icons">event</i>4 March, 2018</span>
+              <p class="fs-14">Curabitur purus sem, malesuada eu luctus eget, suscipit sed turpis. Nam pellentesque
+                felis vitae justo accumsan, sed semper nisi sollicitudin...</p>
+            </li>
+            <li>
+              <div class="ms-btn-icon btn-pill icon btn-info">
+                <i class="flaticon-information"></i>
+              </div>
+              <h6>Checkout what's Trending</h6>
+              <span> <i class="material-icons">event</i>1 January, 2021</span>
+              <p class="fs-14">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque scelerisque diam non
+                nisi semper, ula in sodales vehicula....</p>
+            </li>
+            <li>
+              <div class="ms-btn-icon btn-pill icon btn-secondary">
+                <i class="flaticon-diamond"></i>
+              </div>
+              <h6>Your Dashboard is ready</h6>
+              <span> <i class="material-icons">event</i>4 March, 2018</span>
+              <p class="fs-14">Curabitur purus sem, malesuada eu luctus eget, suscipit sed turpis. Nam pellentesque
+                felis vitae justo accumsan, sed semper nisi sollicitudin...</p>
+            </li>
           </ul>
-          <div id="calendar"></div>
+          <a class="btn btn-primary d-block" href="#"> View All </a>
         </div>
-      </div>
-
-      <!-- Location -->
-      <div class="tab-pane fade" id="qa-location" role="tabpanel">
-        <div class="p-3">
-          <h6>어린이집 위치</h6>
-          <div id="map" style="width:100%;height:300px;"></div>
-        </div>
-      </div>
-
-      <!-- Attendance -->
-      <div class="tab-pane fade" id="qa-attendance" role="tabpanel">
-        <div class="p-3">
-          <h6>출석 현황</h6>
-          <p>등원 18명 / 결석 2명</p>
-          <div style="background:#eee;height:10px;border-radius:5px;">
-            <div style="background:#4CAF50;width:90%;height:10px;border-radius:5px;"></div>
+        <div class="tab-pane fade" id="recentPosts" role="tabpanel">
+          <h6>General Settings</h6>
+          <div class="ms-form-group">
+            <span class="ms-option-name fs-14">Location Tracking</span>
+            <label class="ms-switch float-right">
+              <input type="checkbox" />
+              <span class="ms-switch-slider round"></span>
+            </label>
+          </div>
+          <div class="ms-form-group">
+            <span class="ms-option-name fs-14">Allow Notifications</span>
+            <label class="ms-switch float-right">
+              <input type="checkbox" />
+              <span class="ms-switch-slider round"></span>
+            </label>
+          </div>
+          <div class="ms-form-group">
+            <span class="ms-option-name fs-14">Allow Popups</span>
+            <label class="ms-switch float-right">
+              <input checked="" type="checkbox" />
+              <span class="ms-switch-slider round"></span>
+            </label>
+          </div>
+          <h6>Log Settings</h6>
+          <div class="ms-form-group">
+            <span class="ms-option-name fs-14">Enable Logging</span>
+            <label class="ms-switch float-right">
+              <input checked="" type="checkbox" />
+              <span class="ms-switch-slider round"></span>
+            </label>
+          </div>
+          <div class="ms-form-group">
+            <span class="ms-option-name fs-14">Audit Logs</span>
+            <label class="ms-switch float-right">
+              <input type="checkbox" />
+              <span class="ms-switch-slider round"></span>
+            </label>
+          </div>
+          <div class="ms-form-group">
+            <span class="ms-option-name fs-14">Error Logs</span>
+            <label class="ms-switch float-right">
+              <input checked="" type="checkbox" />
+              <span class="ms-switch-slider round"></span>
+            </label>
+          </div>
+          <h6>Advanced Settings</h6>
+          <div class="ms-form-group">
+            <span class="ms-option-name fs-14">Enable Logging</span>
+            <label class="ms-switch float-right">
+              <input checked="" type="checkbox" />
+              <span class="ms-switch-slider round"></span>
+            </label>
+          </div>
+          <div class="ms-form-group">
+            <span class="ms-option-name fs-14">Audit Logs</span>
+            <label class="ms-switch float-right">
+              <input type="checkbox" />
+              <span class="ms-switch-slider round"></span>
+            </label>
+          </div>
+          <div class="ms-form-group">
+            <span class="ms-option-name fs-14">Error Logs</span>
+            <label class="ms-switch float-right">
+              <input checked="" type="checkbox" />
+              <span class="ms-switch-slider round"></span>
+            </label>
           </div>
         </div>
       </div>
     </div>
-  </div>
-</aside>
+  </aside>
+  <!-- Main Content -->
+  <main class="body-content">
+    <!-- Navigation Bar -->
+    <nav class="navbar ms-navbar bg-blue-500 p-4">
+      <span class="text-white font-bold text-lg">내 프로젝트</span>
+    </nav>
+    <!-- Body Content Wrapper -->
+    <!-- Body Content Wrapper -->
+    <div class="ms-content-wrapper">
+      <!-- Icon cards Widget -->
+      <div class="row">
+        <div class="col-xl-3 col-md-6">
+          <div class="ms-card card-gradient-success ms-widget ms-infographics-widget">
+            <div class="ms-card-body media">
+              <div class="media-body">
+                <h6>Total Students</h6>
+                <p class="ms-card-change"> <i class="material-icons">arrow_upward</i> 450</p>
+                <p class="fs-12">48% increase</p>
+              </div>
+            </div>
+            <i class="fa fa-user"></i>
+          </div>
+        </div>
+        <div class="col-xl-3 col-md-6">
+          <div class="ms-card card-gradient-secondary ms-widget ms-infographics-widget">
+            <div class="ms-card-body media">
+              <div class="media-body">
+                <h6>Total Fees</h6>
+                <p class="ms-card-change"> $30,950</p>
+                <p class="fs-12">22% increase</p>
+              </div>
+            </div>
+            <i class="fas fa-dollar-sign"></i>
+          </div>
+        </div>
+        <div class="col-xl-3 col-md-6">
+          <div class="ms-card card-gradient-warning ms-widget ms-infographics-widget">
+            <div class="ms-card-body media">
+              <div class="media-body">
+                <h6>Total Student</h6>
+                <p class="ms-card-change"> <i class="material-icons">arrow_upward</i> 4567</p>
+                <p class="fs-12">78% increase</p>
+              </div>
+            </div>
+            <i class="fa fa-users"></i>
+          </div>
+        </div>
+        <div class="col-xl-3 col-md-6">
+          <div class="ms-card card-gradient-info ms-widget ms-infographics-widget">
+            <div class="ms-card-body media">
+              <div class="media-body">
+                <h6>Total Courses</h6>
+                <p class="ms-card-change"> 50</p>
+                <p class="fs-12">62% increase</p>
+              </div>
+            </div>
+            <i class="fa fa-graduation-cap"></i>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xl-6 col-md-12">
+          <div class="ms-panel">
+            <div class="ms-panel-header">
+              <h6> Universties Toppers</h6>
+              <a aria-controls="popups" aria-expanded="false" class="fa fa-chevron-down float-right"
+                data-target="#topper" data-toggle="collapse"> </a>
+            </div>
+            <div class="ms-panel-body" id="topper">
+              <div class="table-responsive">
+                <table class="table table-hover">
+                  <thead>
+                    <tr>
+                      <th scope="col">Name</th>
+                      <th scope="col">Rank</th>
+                      <th scope="col">Persentage</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="ms-table-f-w"> <img alt="people"
+                          src="https://metropolitanhost.com/themes/templatemoster/html/weeducate/assets/img/we-educate/topper-1.jpg" />
+                        Chihoo Hwang </td>
+                      <td>1</td>
+                      <td>99.9%</td>
+                    </tr>
+                    <tr>
+                      <td class="ms-table-f-w"> <img alt="people"
+                          src="https://metropolitanhost.com/themes/templatemoster/html/weeducate/assets/img/we-educate/topper-2.jpg" />
+                        Ajay Suryavanash </td>
+                      <td>2</td>
+                      <td>98%</td>
+                    </tr>
+                    <tr>
+                      <td class="ms-table-f-w"> <img alt="people"
+                          src="https://metropolitanhost.com/themes/templatemoster/html/weeducate/assets/img/we-educate/topper-3.jpg" />
+                        Johnson </td>
+                      <td>3</td>
+                      <td>97%</td>
+                    </tr>
+                    <tr>
+                      <td class="ms-table-f-w"> <img alt="people"
+                          src="https://metropolitanhost.com/themes/templatemoster/html/weeducate/assets/img/we-educate/topper-5.jpg" />
+                        John Doe </td>
+                      <td>5</td>
+                      <td>93%</td>
+                    </tr>
+                    <tr>
+                      <td class="ms-table-f-w"> <img alt="people"
+                          src="https://metropolitanhost.com/themes/templatemoster/html/weeducate/assets/img/we-educate/topper-6.jpg" />
+                        John Doe </td>
+                      <td>6</td>
+                      <td>92%</td>
+                    </tr>
+                    <tr>
+                      <td class="ms-table-f-w"> <img alt="people"
+                          src="https://metropolitanhost.com/themes/templatemoster/html/weeducate/assets/img/we-educate/topper-2.jpg" />
+                        John Doe<br /> </td>
+                      <td>7</td>
+                      <td>91%</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-6 col-md-12">
+          <div class="ms-panel pb-8">
+            <div class="ms-panel-header">
+              <h6>Course Table</h6>
+              <a aria-controls="popups" aria-expanded="false" class="fa fa-chevron-down float-right"
+                data-target="#course" data-toggle="collapse"> </a>
+            </div>
+            <div class="ms-panel-body" id="course">
+              <div class="table-responsive">
+                <table class="table table-bordered">
+                  <thead>
+                    <tr>
+                      <th scope="col">#</th>
+                      <th scope="col">Courses</th>
+                      <th scope="col">Professors</th>
+                      <th scope="col">Fees</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th scope="row">1</th>
+                      <td>Java</td>
+                      <td>John Kery</td>
+                      <td>130$</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">2</th>
+                      <td>Php</td>
+                      <td>Johnson</td>
+                      <td>140$</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">3</th>
+                      <td>Anguler</td>
+                      <td>Kevin Owens</td>
+                      <td>120$</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">4</th>
+                      <td>React JS</td>
+                      <td>Kety Perey</td>
+                      <td>170$</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">5</th>
+                      <td>.Net</td>
+                      <td>Kevin shai</td>
+                      <td>110$</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">6</th>
+                      <td>Javascript</td>
+                      <td>John Kesy</td>
+                      <td>90$</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">7</th>
+                      <td>Kotline</td>
+                      <td>Alura</td>
+                      <td>180$</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xl-6 col-md-12">
+          <div class="ms-panel">
+            <div class="ms-panel-header">
+              <h6>University Results</h6>
+              <a aria-controls="popups" aria-expanded="false" class="fa fa-chevron-down float-right"
+                data-target="#graph" data-toggle="collapse"> </a>
+            </div>
+            <div class="ms-panel-body" id="graph">
+              <canvas id="bar-chart"></canvas>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-6 col-md-12">
+          <div class="ms-panel height-84">
+            <div class="ms-panel-header">
+              <h6>Excellent Toppers</h6>
+            </div>
+            <div class="ms-panel-body">
+              <div class="table-responsive">
+                <table class="table table-hover">
+                  <thead>
+                    <tr>
+                      <th scope="col">Name</th>
+                      <th scope="col">Rank</th>
+                      <th scope="col">Persentage</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="ms-table-f-w"> Chihoo Hwang </td>
+                      <td>1</td>
+                      <td>99.9%</td>
+                    </tr>
+                    <tr>
+                      <td class="ms-table-f-w"> Ajay Suryavanash </td>
+                      <td>2</td>
+                      <td>98%</td>
+                    </tr>
+                    <tr>
+                      <td class="ms-table-f-w"> Johnson </td>
+                      <td>3</td>
+                      <td>97%</td>
+                    </tr>
+                    <tr>
+                      <td class="ms-table-f-w"> Kalvish </td>
+                      <td>4</td>
+                      <td>96%</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xl-12 col-md-12">
+          <div class="ms-panel">
+            <div class="ms-panel-header">
+              <h6>New Student List</h6>
+              <a aria-controls="popups" aria-expanded="false" class="fa fa-chevron-down float-right" data-target="#list"
+                data-toggle="collapse"> </a>
+            </div>
+            <div class="ms-panel-body" id="list">
+              <div class="table-responsive">
+                <table class="table table-hover">
+                  <thead>
+                    <tr>
+                      <th scope="col">Name</th>
+                      <th scope="col">Head Of Departements</th>
+                      <th scope="col">Date of Admit</th>
+                      <th scope="col">fees</th>
+                      <th scope="col">Branch</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="ms-table-f-w"> <img alt="people"
+                          src="https://metropolitanhost.com/themes/templatemoster/html/weeducate/assets/img/we-educate/topper-1.jpg" />
+                        Chihoo Hwang </td>
+                      <td>Joan</td>
+                      <td>27/5/2021</td>
+                      <td>paid</td>
+                      <td>Meachnical</td>
+                    </tr>
+                    <tr>
+                      <td class="ms-table-f-w"> <img alt="people"
+                          src="https://metropolitanhost.com/themes/templatemoster/html/weeducate/assets/img/we-educate/topper-3.jpg" />
+                        Ajay Suryavanash </td>
+                      <td>Moxely</td>
+                      <td>11/6/2021</td>
+                      <td>Unpaid</td>
+                      <td>Electrical</td>
+                    </tr>
+                    <tr>
+                      <td class="ms-table-f-w"> <img alt="people"
+                          src="https://metropolitanhost.com/themes/templatemoster/html/weeducate/assets/img/we-educate/topper-5.jpg" />
+                        Johny martin </td>
+                      <td>Rich Flair</td>
+                      <td>26/5/2021</td>
+                      <td>paid</td>
+                      <td>Computer</td>
+                    </tr>
+                    <tr>
+                      <td class="ms-table-f-w"> <img alt="people"
+                          src="https://metropolitanhost.com/themes/templatemoster/html/weeducate/assets/img/we-educate/topper-6.jpg" />
+                        Noxin Lee </td>
+                      <td>Tony</td>
+                      <td>20/7/2021</td>
+                      <td>unpaid</td>
+                      <td>Civil</td>
+                    </tr>
+                    <tr>
+                      <td class="ms-table-f-w"> <img alt="people"
+                          src="https://metropolitanhost.com/themes/templatemoster/html/weeducate/assets/img/we-educate/topper-2.jpg" />Jackey
+                      </td>
+                      <td>Bilgates</td>
+                      <td>11/4/2021</td>
+                      <td>paid</td>
+                      <td>Computer</td>
+                    </tr>
+                    <tr>
+                      <td class="ms-table-f-w"> <img alt="people"
+                          src="https://metropolitanhost.com/themes/templatemoster/html/weeducate/assets/img/we-educate/topper-5.jpg" />Rocky
+                      </td>
+                      <td>Stephan</td>
+                      <td>24/6/2021</td>
+                      <td>unpaid</td>
+                      <td>Electronics</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <!--   Quick bar -->
+  <aside class="ms-quick-bar fixed ms-d-block-lg" id="ms-quick-bar">
+    <ul class="nav nav-tabs ms-quick-bar-list" role="tablist">
+      <li class="ms-quick-bar-item ms-has-qa" data-placement="left" data-title="Chat" data-toggle="tooltip"
+        role="presentation" title="Launch Chat">
+        <a aria-controls="qa-chat" data-toggle="tab" href="#qa-chat" role="tab">
+          <i class="flaticon-chat"></i>
+          <span class="ms-quick-bar-label">Chat</span>
+        </a>
+      </li>
+      <li class="ms-quick-bar-item ms-has-qa" data-placement="left" data-title="Email" data-toggle="tooltip"
+        role="presentation" title="Launch Email">
+        <a aria-controls="qa-email" data-toggle="tab" href="#qa-email" role="tab">
+          <i class="flaticon-mail"></i>
+          <span class="ms-quick-bar-label">Email</span>
+        </a>
+      </li>
+      <li class="ms-quick-bar-item ms-has-qa" data-placement="left" data-title="To-do-list" data-toggle="tooltip"
+        role="presentation" title="Launch To-do-list">
+        <a aria-controls="qa-toDo" data-toggle="tab" href="#qa-toDo" role="tab">
+          <i class="flaticon-list"></i>
+          <span class="ms-quick-bar-label">To-do</span>
+        </a>
+      </li>
+      <li class="ms-quick-bar-item ms-has-qa" data-placement="left" data-title="Reminders" data-toggle="tooltip"
+        role="presentation" title="Launch Reminders">
+        <a aria-controls="qa-reminder" data-toggle="tab" href="#qa-reminder" role="tab">
+          <i class="flaticon-bell"></i>
+          <span class="ms-quick-bar-label">Reminder</span>
+        </a>
+      </li>
+      <li class="ms-quick-bar-item ms-has-qa" data-placement="left" data-title="Notes" data-toggle="tooltip"
+        role="presentation" title="Launch Notes">
+        <a aria-controls="qa-notes" data-toggle="tab" href="#qa-notes" role="tab">
+          <i class="flaticon-pencil"></i>
+          <span class="ms-quick-bar-label">Notes</span>
+        </a>
+      </li>
+      <li class="ms-quick-bar-item ms-has-qa" data-placement="left" data-title="Invite Members" data-toggle="tooltip"
+        role="presentation" title="Invite Members">
+        <a aria-controls="qa-invite" data-toggle="tab" href="#qa-invite" role="tab">
+          <i class="flaticon-share-1"></i>
+          <span class="ms-quick-bar-label">Invite</span>
+        </a>
+      </li>
+    </ul>
+    <div class="ms-configure-qa" data-placement="left" data-toggle="tooltip" title="Configure Quick Access">
+      <a href="#">
+        <i class="flaticon-hammer"></i>
+        <span class="ms-quick-bar-label">Configure</span>
+      </a>
+    </div>
 
-<!-- MODALS -->
-<!-- Reminder Modal -->
-<div aria-labelledby="reminder-modal" class="modal fade" id="reminder-modal" role="dialog" tabindex="-1">
-<div class="modal-dialog modal-dialog-centered" role="document">
-<div class="modal-content">
-<div class="modal-header bg-secondary">
-<h5 class="modal-title has-icon text-white"> New Reminder</h5>
-<button aria-label="Close" class="close" data-dismiss="modal" type="button"><span aria-hidden="true">×</span></button>
-</div>
-<form>
-<div class="modal-body">
-<div class="ms-form-group">
-<label>Remind me about</label>
-<textarea class="form-control" name="reminder"></textarea>
-</div>
-<div class="ms-form-group">
-<span class="ms-option-name fs-14">Repeat Daily</span>
-<label class="ms-switch float-right">
-<input type="checkbox"/>
-<span class="ms-switch-slider round"></span>
-</label>
-</div>
-<div class="row">
-<div class="col-md-6">
-<div class="ms-form-group">
-<input class="form-control datepicker" name="reminder-date" type="text" value=""/>
-</div>
-</div>
-<div class="col-md-6">
-<div class="ms-form-group">
-<select class="form-control" name="reminder-time">
-<option value="">12:00 pm</option>
-<option value="">1:00 pm</option>
-<option value="">2:00 pm</option>
-<option value="">3:00 pm</option>
-<option value="">4:00 pm</option>
-</select>
-</div>
-</div>
-</div>
-</div>
-<div class="modal-footer">
-<button class="btn btn-light" data-dismiss="modal" type="button">Close</button>
-<button class="btn btn-secondary shadow-none" data-dismiss="modal" type="button">Add Reminder</button>
-</div>
-</form>
-</div>
-</div>
-</div>
-<!-- Notes Modal -->
-<div aria-labelledby="notes-modal" class="modal fade" id="notes-modal" role="dialog" tabindex="-1">
-<div class="modal-dialog modal-dialog-centered" role="document">
-<div class="modal-content">
-<div class="modal-header bg-secondary">
-<h5 class="modal-title has-icon text-white" id="NoteModal">New Note</h5>
-<button aria-label="Close" class="close" data-dismiss="modal" type="button"><span aria-hidden="true">×</span></button>
-</div>
-<form>
-<div class="modal-body">
-<div class="ms-form-group">
-<label>Note Title</label>
-<input class="form-control" name="note-title" type="text" value=""/>
-</div>
-<div class="ms-form-group">
-<label>Note Description</label>
-<textarea class="form-control" name="note-description"></textarea>
-</div>
-</div>
-<div class="modal-footer">
-<button class="btn btn-light" data-dismiss="modal" type="button">Close</button>
-<button class="btn btn-secondary shadow-none" data-dismiss="modal" type="button">Add Note</button>
-</div>
-</form>
-</div>
-</div>
-</div>
-<!-- SCRIPTS -->
-<!-- Global Required Scripts Start -->
+    <!-- Quick bar -->
+    <aside class="ms-quick-bar fixed ms-d-block-lg" id="ms-quick-bar">
+      <ul class="nav nav-tabs ms-quick-bar-list" role="tablist">
+        <!-- Calendar -->
+        <li class="ms-quick-bar-item ms-has-qa">
+          <a data-toggle="tab" href="#qa-calendar" role="tab">
+            <i class="flaticon-calendar"></i>
+            <span class="ms-quick-bar-label">일정</span>
+          </a>
+        </li>
+        <!-- Location -->
+        <li class="ms-quick-bar-item ms-has-qa">
+          <a data-toggle="tab" href="#qa-location" role="tab">
+            <i class="flaticon-map"></i>
+            <span class="ms-quick-bar-label">주소</span>
+          </a>
+        </li>
+        <!-- Attendance -->
+        <li class="ms-quick-bar-item ms-has-qa">
+          <a data-toggle="tab" href="#qa-attendance" role="tab">
+            <i class="flaticon-user"></i>
+            <span class="ms-quick-bar-label">Attendance</span>
+          </a>
+        </li>
+      </ul>
+
+      <div class="ms-quick-bar-content">
+        <div class="ms-quick-bar-header clearfix">
+          <h5 class="ms-quick-bar-title float-left">미니바</h5>
+          <button class="close ms-toggler" data-target="#ms-quick-bar" data-toggle="hideQuickBar">
+            <span aria-hidden="true">×</span>
+          </button>
+        </div>
+
+        <div class="ms-quick-bar-body tab-content">
+          <!-- Calendar -->
+          <div class="tab-pane fade show" id="qa-calendar" role="tabpanel">
+            <div class="p-3">
+              <h6 class="mb-3">📅 오늘 일정</h6>
+              <div id="calendar"></div>
+            </div>
+          </div>
+
+
+
+          <!-- Location -->
+          <div class="tab-pane fade" id="qa-location" role="tabpanel">
+            <div class="p-3">
+              <h6>어린이집 위치</h6>
+              <div id="map" style="width:100%;height:300px;"></div>
+            </div>
+          </div>
+
+          <!-- Attendance -->
+          <div class="tab-pane fade" id="qa-attendance" role="tabpanel">
+            <div class="p-3">
+              <h6>출석 현황</h6>
+              <p>등원 18명 / 결석 2명</p>
+              <div style="background:#eee;height:10px;border-radius:5px;">
+                <div style="background:#4CAF50;width:90%;height:10px;border-radius:5px;"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- MODALS -->
+    <!-- Reminder Modal -->
+    <div aria-labelledby="reminder-modal" class="modal fade" id="reminder-modal" role="dialog" tabindex="-1">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header bg-secondary">
+            <h5 class="modal-title has-icon text-white"> New Reminder</h5>
+            <button aria-label="Close" class="close" data-dismiss="modal" type="button"><span
+                aria-hidden="true">×</span></button>
+          </div>
+          <form>
+            <div class="modal-body">
+              <div class="ms-form-group">
+                <label>Remind me about</label>
+                <textarea class="form-control" name="reminder"></textarea>
+              </div>
+              <div class="ms-form-group">
+                <span class="ms-option-name fs-14">Repeat Daily</span>
+                <label class="ms-switch float-right">
+                  <input type="checkbox" />
+                  <span class="ms-switch-slider round"></span>
+                </label>
+              </div>
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="ms-form-group">
+                    <input class="form-control datepicker" name="reminder-date" type="text" value="" />
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="ms-form-group">
+                    <select class="form-control" name="reminder-time">
+                      <option value="">12:00 pm</option>
+                      <option value="">1:00 pm</option>
+                      <option value="">2:00 pm</option>
+                      <option value="">3:00 pm</option>
+                      <option value="">4:00 pm</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button class="btn btn-light" data-dismiss="modal" type="button">Close</button>
+              <button class="btn btn-secondary shadow-none" data-dismiss="modal" type="button">Add Reminder</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <!-- Notes Modal -->
+    <div aria-labelledby="notes-modal" class="modal fade" id="notes-modal" role="dialog" tabindex="-1">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header bg-secondary">
+            <h5 class="modal-title has-icon text-white" id="NoteModal">New Note</h5>
+            <button aria-label="Close" class="close" data-dismiss="modal" type="button"><span
+                aria-hidden="true">×</span></button>
+          </div>
+          <form>
+            <div class="modal-body">
+              <div class="ms-form-group">
+                <label>Note Title</label>
+                <input class="form-control" name="note-title" type="text" value="" />
+              </div>
+              <div class="ms-form-group">
+                <label>Note Description</label>
+                <textarea class="form-control" name="note-description"></textarea>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button class="btn btn-light" data-dismiss="modal" type="button">Close</button>
+              <button class="btn btn-secondary shadow-none" data-dismiss="modal" type="button">Add Note</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <!-- SCRIPTS -->
+    <!-- Global Required Scripts Start -->
 
 
 
 
 
-<!-- Global Required Scripts End -->
-<!-- Page Specific Scripts Start -->
+    <!-- Global Required Scripts End -->
+    <!-- Page Specific Scripts Start -->
 
 
-<!-- Page Specific Scripts End -->
-<!-- Weeducate core JavaScript -->
+    <!-- Page Specific Scripts End -->
+    <!-- Weeducate core JavaScript -->
 
-<!-- Settings -->
+    <!-- Settings -->
 
-<!-- Page Specific Scripts Start -->
-<!-- Kakao Map SDK -->
+    <!-- Page Specific Scripts Start -->
+    <!-- Kakao Map SDK -->
+    
 <script src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=84acc9948fcdf1873b66974cabcae962&autoload=false&libraries=services"></script>
 
-<script src="assets/js/dashboard.js"></script></body>
+<!-- FullCalendar (CSS는 head에 이미 있음) -->
+<script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.11/index.global.min.js"></script>
+
+<!-- 내 커스텀 JS -->
+<script src="assets/js/dashboard.js"></script>
+</body>
 </html>

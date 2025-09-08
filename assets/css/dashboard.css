@@ -6,20 +6,13 @@
 @import url("https://metropolitanhost.com/themes/templatemoster/html/weeducate/assets/css/slick.css");
 @import url("style.css");
 
-/* ===== 커스텀 CSS 작성 공간 ===== */
+/* ===== 기본 글꼴 & 배경 ===== */
 body {
   font-family: 'Roboto', sans-serif;
-}
-
-
-/* ===== 커스텀 CSS 예시 ===== */
-
-/* 전체 배경색 */
-body {
   background-color: #f4f6f9;
 }
 
-/* 헤더 스타일 */
+/* ===== 헤더 스타일 ===== */
 .navbar {
   background: linear-gradient(to right, #fdfeff, #00c6ff);
   color: #fff;
@@ -28,36 +21,80 @@ body {
   color: #fff !important;
 }
 
-/* 사이드바 스타일 */
+/* ===== 사이드바 스타일 ===== */
 #ms-side-nav {
   background-color: #ffffff;
 }
 #ms-side-nav .menu-item a {
-  color: #bbb;
+  color: #888;
+  transition: color 0.3s;
 }
 #ms-side-nav .menu-item a:hover {
-  color: #fff;
+  color: #00c6ff;
 }
 
-/* Professors 메뉴 강조 */
+/* ===== Professors 메뉴 강조 ===== */
 #ms-side-nav .menu-item.active > a {
   color: #ff9800 !important;
   font-weight: bold;
 }
 
-/* 카드 기본 스타일 */
+/* ===== 카드 기본 스타일 ===== */
 .card {
   border-radius: 12px;
-  box-shadow: 0 4px 10px rgb(247, 248, 248);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
 }
 .card-header {
   background-color: #fafafa;
-  color: #fff;
   font-weight: bold;
 }
+
 /* ===== Kakao Map 스타일 ===== */
 #map {
   width: 100%;
-  height: 400px;   /* 원하는 높이 */
+  height: 400px;
   min-height: 300px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
+
+/* ===== FullCalendar 커스텀 ===== */
+#calendar {
+  max-width: 100%;
+  margin: 0 auto;
+  background: #fff;
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.fc .fc-toolbar-title {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+}
+
+.fc .fc-daygrid-day-number {
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.fc .fc-day-today {
+  background: #e6f7ff !important;
+  border-radius: 5px;
+}
+
+.fc-event {
+  border: none !important;
+  border-radius: 6px !important;
+  font-size: 12px;
+  padding: 2px 6px;
+  color: white !important;
+  cursor: pointer;
+}
+
+/* 일정 타입별 색상 */
+.fc-event.lesson  { background: #4CAF50; }  /* 수업 */
+.fc-event.lunch   { background: #FF9800; }  /* 점심 */
+.fc-event.meeting { background: #2196F3; }  /* 상담 */
