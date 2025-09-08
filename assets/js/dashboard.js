@@ -134,3 +134,50 @@ loadScriptsSequentially([...jsLinks], () => {
   initMap();       // ✅ 주소 기반 지도 실행
   initCalendar();  // ✅ FullCalendar 실행
 });
+async function loadMeal(date) {
+  const apiKey = "1a70a5506a3e42a882e2e1ef7d0d1a12";
+  const officeCode = "DGE";       // 대구광역시교육청 코드
+  const schoolCode = "7240454";   // 동대구초등학교 코드
+
+  // 기본값: 오늘 날짜
+  const targetDate = date || new Date().toISOString().slice(0,10).replace(/-/g,"");
+
+  const url = `https://open.neis.go.kr/hub/mealServiceDietInfo?KEY=${apiKey}&Type=json&pIndex=1&pSize=10&ATPT_OFCDC_SC_CODE=${officeCode}&SD_SCHUL_CODE=${schoolCode}&MLSV_YMD=${targetDate}`;
+
+  try {
+    const res = await fetch(url);
+    const data = await res.json();
+
+    if (!data.mealServiceDietInfo) {
+      document.getElementById("meal").innerHTML = `<p>❌ ${targetDate} 급식 데이터가 없습니다</p>`;
+      return;
+    }
+
+    const meals = data.mealServiceDietInfo[1].row;
+    let html = `<h6>${targetDate.slice(0,4)}년 ${targetDate.slice(4,6)}월 ${targetDate.slice(6,8)}일 급식</h6><ul>`;
+    meals.forEach(m => {
+      html += `<li>${m.DDISH_NM.replace(/<br\/>/g, ", ")}</li>`;
+    });
+    html += "</ul>";
+
+    document.getElementById("meal").innerHTML = html;
+  } catch (e) {
+    console.error("급식 데이터를 불러올 수 없습니다.", e);
+    document.getElementById("meal").innerHTML = "데이터 오류 ❌";
+  }
+}
+
+// 페이지 로드 시 오늘 급식 표시
+document.addEventListener("DOMContentLoaded", () => {
+  loadMeal();
+
+  document.getElementById("meal-btn").addEventListener("click", () => {
+    const dateInput = document.getElementById("meal-date").value;
+    if (dateInput) {
+      const yyyymmdd = dateInput.replace(/-/g,"");
+      loadMeal(yyyymmdd);
+    } else {
+      alert("날짜를 선택하세요!");
+    }
+  });
+});

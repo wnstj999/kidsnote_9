@@ -704,7 +704,7 @@
         <li class="ms-quick-bar-item ms-has-qa">
           <a data-toggle="tab" href="#qa-attendance" role="tab">
             <i class="flaticon-user"></i>
-            <span class="ms-quick-bar-label">Attendance</span>
+            <span class="ms-quick-bar-label">급식</span>
           </a>
         </li>
       </ul>
@@ -737,16 +737,16 @@
           </div>
 
           <!-- Attendance -->
-          <div class="tab-pane fade" id="qa-attendance" role="tabpanel">
-            <div class="p-3">
-              <h6>출석 현황</h6>
-              <p>등원 18명 / 결석 2명</p>
-              <div style="background:#eee;height:10px;border-radius:5px;">
-                <div style="background:#4CAF50;width:90%;height:10px;border-radius:5px;"></div>
-              </div>
-            </div>
+          <div id="meal-section">
+            <h5>🍽 급식 조회</h5>
+            <input type="date" id="meal-date" />
+            <button id="meal-btn">조회</button>
+            <div id="meal"></div>
           </div>
+
         </div>
+      </div>
+      </div>
       </div>
     </aside>
 
@@ -846,13 +846,15 @@
 
     <!-- Page Specific Scripts Start -->
     <!-- Kakao Map SDK -->
-    
-<script src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=84acc9948fcdf1873b66974cabcae962&autoload=false&libraries=services"></script>
 
-<!-- FullCalendar (CSS는 head에 이미 있음) -->
-<script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.11/index.global.min.js"></script>
+    <script
+      src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=84acc9948fcdf1873b66974cabcae962&autoload=false&libraries=services"></script>
 
-<!-- 내 커스텀 JS -->
-<script src="assets/js/dashboard.js"></script>
+    <!-- FullCalendar (CSS는 head에 이미 있음) -->
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.11/index.global.min.js"></script>
+
+    <!-- 내 커스텀 JS -->
+    <script src="assets/js/dashboard.js"></script>
 </body>
+
 </html>

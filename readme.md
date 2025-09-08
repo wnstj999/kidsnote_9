@@ -15,3 +15,7 @@ https://claude.ai/
 오른쪽 사이드바 달력/일정 수정 필요 , 지도는 완성 디자인 수정 필요
 
 달력/일정 제작
+
+3번째 미니바 급식메뉴 추가 예정
+나이스교육정보개방포털 이용 예정 -  https://open.neis.go.kr/portal/myPage/myPage.do작업할 주소
+틀은 만들었고 api 연동 마저 해야함
