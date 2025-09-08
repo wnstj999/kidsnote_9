@@ -24,7 +24,6 @@
 <!-- Weeducate styles -->
 
 <!-- Favicon -->
-<script src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=84acc9948fcdf1873b66974cabcae962&autoload=false&libraries=services"></script>
 
 <link href="assets/css/dashboard.css" rel="stylesheet"/></head>
 <body class="ms-body ms-aside-left-open ms-primary-theme ms-has-quickbar">
@@ -633,14 +632,14 @@
     <li class="ms-quick-bar-item ms-has-qa">
       <a data-toggle="tab" href="#qa-calendar" role="tab">
         <i class="flaticon-calendar"></i>
-        <span class="ms-quick-bar-label">Calendar</span>
+        <span class="ms-quick-bar-label">일정</span>
       </a>
     </li>
     <!-- Location -->
     <li class="ms-quick-bar-item ms-has-qa">
       <a data-toggle="tab" href="#qa-location" role="tab">
         <i class="flaticon-map"></i>
-        <span class="ms-quick-bar-label">Location</span>
+        <span class="ms-quick-bar-label">주소</span>
       </a>
     </li>
     <!-- Attendance -->
@@ -654,7 +653,7 @@
 
   <div class="ms-quick-bar-content">
     <div class="ms-quick-bar-header clearfix">
-      <h5 class="ms-quick-bar-title float-left">Quick Access</h5>
+      <h5 class="ms-quick-bar-title float-left">미니바</h5>
       <button class="close ms-toggler" data-target="#ms-quick-bar" data-toggle="hideQuickBar">
         <span aria-hidden="true">×</span>
       </button>
@@ -789,32 +788,8 @@
 <!-- Settings -->
 
 <!-- Page Specific Scripts Start -->
-<script>
-  kakao.maps.load(function() {
-    // 지도 컨테이너
-    var container = document.getElementById('map');
-    var options = {
-      center: new kakao.maps.LatLng(35.869452, 128.595678), // 대구 한국IT교육원 좌표
-      level: 3
-    };
-
-    // 지도 생성
-    var map = new kakao.maps.Map(container, options);
-
-    // 마커 생성
-    var marker = new kakao.maps.Marker({
-      position: new kakao.maps.LatLng(35.869452, 128.595678)
-    });
-    marker.setMap(map);
-
-    // 인포윈도우 (말풍선)
-    var infowindow = new kakao.maps.InfoWindow({
-      content: '<div style="padding:5px;font-size:13px;">한국IT교육원</div>'
-    });
-    infowindow.open(map, marker);
-  });
-</script>
-
+<!-- Kakao Map SDK -->
+<script src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=84acc9948fcdf1873b66974cabcae962&autoload=false&libraries=services"></script>
 
 <script src="assets/js/dashboard.js"></script></body>
 </html>
